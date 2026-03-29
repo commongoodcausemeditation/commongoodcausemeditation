@@ -1,0 +1,33 @@
+<div class="sound-mixer p-6 glass-card rounded-2xl w-full max-w-sm">
+    <h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-4">Ambient Soundscape</h3>
+    <div class="grid grid-cols-2 gap-4">
+        <!-- Rainforest -->
+        <div class="flex flex-col gap-2">
+            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="rainforest">
+                🌿 Rainforest
+            </button>
+            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="rainforest" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <!-- Deep Space -->
+        <div class="flex flex-col gap-2">
+            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="space">
+                ✨ Deep Space
+            </button>
+            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="space" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <!-- Singing Bowls -->
+        <div class="flex flex-col gap-2">
+            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="bowls">
+                🥣 Singing Bowls
+            </button>
+            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="bowls" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <!-- White Noise -->
+        <div class="flex flex-col gap-2">
+            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="white">
+                🌫️ White Noise
+            </button>
+            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="white" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+</div>

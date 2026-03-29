@@ -1,0 +1,12 @@
+baseURL = 'https://puneethkanna.github.io/commongoodcausemeditation/'
+languageCode = 'en-us'
+title = 'CommonGoodCauseMeditation'
+
+[params]
+  description = 'High-performance global meditation synchronization hub.'
+   LotusLogo = '🌿' # Placeholder for logo
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow HTML in markdown if needed

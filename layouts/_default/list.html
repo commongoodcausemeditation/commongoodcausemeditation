@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="section-pad">
+    <div class="container text-center mb-16">
+        <h2 class="text-5xl font-serif mb-4">{{ .Title }}</h2>
+        <p class="text-lg opacity-60">{{ .Description }}</p>
+    </div>
+    <div class="container grid md-grid-2 gap-10">
+        {{ range .Pages }}
+        <div class="glass-card flex flex-col h-full">
+            <div class="flex justify-between mb-8">
+                <span class="text-4xl">{{ .Params.icon }}</span>
+                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">{{ .Params.category }}</span>
+            </div>
+            <h3 class="text-xl font-serif mb-4">{{ .Title }}</h3>
+            <p class="text-sm opacity-60 flex-1 mb-8">{{ .Params.description }}</p>
+            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
+                <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')" class="btn btn-primary text-xs py-2 px-6">Join</button>
+                <a href="{{ .Permalink }}" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

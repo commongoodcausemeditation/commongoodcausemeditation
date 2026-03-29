@@ -1,0 +1,41 @@
+<div id="meditation-overlay" class="overlay hidden opacity-0 transition-opacity duration-500">
+    <div class="relative w-full h-full flex flex-col items-center justify-center text-center px-6">
+        
+        <!-- Breathing Space -->
+        <div class="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden">
+            <div class="breathing-circle"></div>
+        </div>
+
+        <!-- Timer Content -->
+        <div class="space-y-12 max-w-2xl">
+            <header>
+                <div id="overlay-icon" class="text-6xl mb-4">🌿</div>
+                <h2 id="overlay-title" class="text-4xl font-serif">Deep Breath Initiation</h2>
+            </header>
+
+            <div id="overlay-countdown" class="text-8xl font-bold tracking-tighter tabular-nums drop-shadow-xl">
+                20:00
+            </div>
+
+            <p id="overlay-intent" class="text-xl opacity-60 italic font-serif">
+                "Harmonizing with the rhythm of the rainforest."
+            </p>
+
+            <div class="flex flex-col items-center gap-6">
+                <!-- Sound Mixer slots into here if active -->
+                {{ partial "sound-mixer.html" . }}
+                
+                <button id="finish-meditation" class="btn btn-primary mt-8">
+                    Finish Session
+                </button>
+            </div>
+        </div>
+
+        <!-- Exit Button -->
+        <button id="close-overlay" class="absolute top-8 right-8 p-3 hover:rotate-90 transition-transform cursor-pointer" aria-label="Close">
+            <svg class="w-8 h-8 opacity-40 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/commongoodcausemeditation/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/rainforest-reforestation/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/summer-solstice-unity/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/impact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/archive/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/community/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/upcoming/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    
+    <!-- Critical Resets -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        a { color: inherit; text-decoration: none; }
+        .hidden { display: none !important; }
+        [data-theme='dark'] { background: #1A1A1A; color: #E0E0E0; }
+        nav a { transition: opacity 0.2s; opacity: 0.6; }
+        nav a:hover { opacity: 1; }
+    </style>
+
+    {{ $style := resources.Get "css/zen-modern.css" }}
+    <link rel="stylesheet" href="{{ (resources.Get "css/header-footer.css").RelPermalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body class="transition-colors duration-200">
+    {{ partial "header.html" . }}
+    <main id="main-content" class="min-h-screen">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+
+    {{ partial "timer-overlay.html" . }}
+
+    <!-- Final Script Setup (Non-fingerprinted for better dev speed) -->
+    {{ range (slice "js/clocks.js" "js/theme-toggle.js" "js/antigravity.js" "js/mixer.js" "js/timer.js" "js/participation.js") }}
+    {{ with resources.Get . }}
+        <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
+    {{ end }}
+
+    {{ block "footer_js" . }}{{ end }}
+</body>
+</html>

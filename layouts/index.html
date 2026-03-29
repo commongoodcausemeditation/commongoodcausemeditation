@@ -1,21 +1,27 @@
 {{ define "main" }}
-<!-- Hero Section -->
+
+<!-- Hero Section: Featured Global Event -->
 <section class="section-pad">
+    <div style="background: green; color: white; padding: 10px; font-weight: bold; text-align: center;">
+        LISTING TITLES:
+        {{ range (where (where site.Pages "Section" "meditations") "Kind" "page") }}
+            [{{ .Title }}]
+        {{ end }}
+    </div>
+
     <div class="container">
-        {{ $meditations := where .Site.RegularPages "Section" "meditations" }}
-        {{ range (where $meditations "Params.type" "event") }}
+        {{ $meditation_pages := where site.RegularPages "Section" "meditations" }}
+        
+        {{ $featured := first 1 $meditation_pages }}
+        {{ range $featured }}
         <div class="glass-card max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div class="flex-1 space-y-6">
-                <span
-                    class="inline-block px-4 py-1 rounded-full bg-[var(--color-highlight)] text-white text-[10px] uppercase font-bold tracking-widest">Special
-                    Event</span>
+                <span class="inline-block px-4 py-1 rounded-full bg-[var(--color-highlight)] text-white text-[10px] uppercase font-bold tracking-widest">Featured Global Event</span>
                 <h2 class="text-5xl font-serif tracking-tight leading-tight">{{ .Title }}</h2>
                 <p class="text-lg opacity-70">{{ .Params.description }}</p>
                 <div class="flex items-center gap-8 pt-4">
                     <div id="hero-countdown" data-target-time="{{ .Params.utc_time }}"></div>
-                    <button
-                        onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')"
-                        class="btn btn-primary">Enter Space</button>
+                    <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')" class="btn btn-primary">Enter Space</button>
                 </div>
             </div>
             <div class="text-9xl">{{ .Params.icon }}</div>
@@ -26,32 +32,65 @@
 
 <div class="spacer-m"></div>
 
-<!-- Causes Section -->
+<!-- Global Events Section -->
 <section class="section-pad">
-    <div class="container text-center">
-        <h2 class="text-4xl font-serif mb-4">Causes for Global Focus</h2>
-        <p class="text-xs opacity-60 uppercase tracking-widest font-bold mb-16">Planetary Synchronization Points</p>
-
-        <div class="grid md-grid-2 lg-grid-3">
-            {{ range (where $meditations "Params.type" "cause") }}
-            <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)]">
-                <div class="flex justify-between mb-8">
-                    <span class="text-4xl">{{ .Params.icon }}</span>
-                    <span class="text-xs uppercase opacity-40 font-bold tracking-widest">{{ .Params.category }}</span>
-                </div>
-                <h3 class="text-2xl font-serif mb-4">{{ .Title }}</h3>
-                <p class="text-sm opacity-60 flex-1 mb-8">{{ .Params.description }}</p>
-                <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                    <div class="flex flex-col text-left">
-                        <span class="text-[8px] uppercase opacity-40 font-bold">Local Sync</span>
-                        <span data-utc-time="{{ .Params.utc_time }}"
-                            class="text-xs font-bold text-[var(--color-accent)]">--:--</span>
-                    </div>
-                    <button
-                        onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')"
-                        class="btn btn-primary text-xs py-2 px-6">Join</button>
-                </div>
+    <div class="container">
+        <div class="flex items-baseline justify-between mb-12">
+            <div>
+                <h2 class="text-4xl font-serif">Global Synchronizations</h2>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Unifying humanity through presence</p>
             </div>
+            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#global" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+        </div>
+        <div class="grid md-grid-2 lg-grid-3">
+            {{ range $meditation_pages }}
+                {{ if eq .Params.group "global" }}
+                    {{ partial "meditation-card.html" . }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<div class="spacer-m"></div>
+
+<!-- Country-Wise Section -->
+<section class="section-pad bg-[rgba(178,172,136,0.05)]">
+    <div class="container">
+        <div class="flex items-baseline justify-between mb-12">
+            <div>
+                <h2 class="text-4xl font-serif">Regional Solidarity</h2>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Localized rhythms and community circles</p>
+            </div>
+            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#country" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+        </div>
+        <div class="grid md-grid-2 lg-grid-3">
+            {{ range $meditation_pages }}
+                {{ if eq .Params.group "country" }}
+                    {{ partial "meditation-card.html" . }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<div class="spacer-m"></div>
+
+<!-- Personal Growth Section -->
+<section class="section-pad">
+    <div class="container">
+        <div class="flex items-baseline justify-between mb-12">
+            <div>
+                <h2 class="text-4xl font-serif">Personal Growth</h2>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Sacred spaces for individual transformation</p>
+            </div>
+            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#personal" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+        </div>
+        <div class="grid md-grid-2 lg-grid-3">
+            {{ range $meditation_pages }}
+                {{ if eq .Params.group "personal" }}
+                    {{ partial "meditation-card.html" . }}
+                {{ end }}
             {{ end }}
         </div>
     </div>
@@ -65,10 +104,8 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-serif mb-16">Your Unified Presence</h2>
             <div class="glass-card flex flex-col items-center py-20 gap-4">
-                <div class="text-[10px] uppercase font-bold tracking-widest opacity-40">Total Synchronized Sessions
-                </div>
-                <div id="user-total-sessions" class="text-9xl font-serif leading-none text-[var(--color-accent)]">0
-                </div>
+                <div class="text-[10px] uppercase font-bold tracking-widest opacity-40">Total Synchronized Sessions</div>
+                <div id="user-total-sessions" class="text-9xl font-serif leading-none text-[var(--color-accent)]">0</div>
                 <p class="text-lg opacity-60 italic mt-8">Every breath resonates in the field.</p>
             </div>
         </div>

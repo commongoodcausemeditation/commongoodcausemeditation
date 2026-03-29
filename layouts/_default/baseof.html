@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 <body class="transition-colors duration-200">
+    <div style="background: blue; color: white; padding: 10px; font-weight: bold; text-align: center; position: relative; z-index: 10001;">
+        GLOBAL DEBUG: SITE PAGES = {{ len site.Pages }} | MEDITATIONS = {{ len (where site.RegularPages "Section" "meditations") }} | CURRENT TYPE = {{ .Type }}
+    </div>
     {{ partial "header.html" . }}
     <main id="main-content" class="min-h-screen">
         {{ block "main" . }}{{ end }}

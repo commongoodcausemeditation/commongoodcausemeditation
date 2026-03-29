@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="section-pad">
+    <div class="container">
+        <header class="max-w-3xl mx-auto text-center mb-24">
+            <h1 class="text-6xl font-serif mb-6">{{ .Title }}</h1>
+            <p class="text-lg opacity-60 italic">{{ .Description }}</p>
+        </header>
+
+        {{ $meditation_pages := where site.RegularPages "Section" "meditations" }}
+
+        <!-- Global Events -->
+        <div id="global" class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Global Synchronizations</span>
+                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+            </div>
+            <div class="grid md-grid-2 lg-grid-3">
+                {{ range $meditation_pages }}
+                    {{ if or (eq .Params.group "global") (eq .Params.type "cause") }}
+                        {{ partial "meditation-card.html" . }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Country Wise -->
+        <div id="country" class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Regional Solidarity</span>
+                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+            </div>
+            <div class="grid md-grid-2 lg-grid-3">
+                {{ range $meditation_pages }}
+                    {{ if eq .Params.group "country" }}
+                        {{ partial "meditation-card.html" . }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Personal Growth -->
+        <div id="personal" class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Personal Growth Journeys</span>
+                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+            </div>
+            <div class="grid md-grid-2 lg-grid-3">
+                {{ range $meditation_pages }}
+                    {{ if eq .Params.group "personal" }}
+                        {{ partial "meditation-card.html" . }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1,4 +1,6 @@
 ---
-title: "Global Resilience Impact"
-description: "Visualizing the ripple effect of our collective meditations on earth systems."
+title: "Impact & Growth"
+description: "Visualizing the resonance of our shared presence."
+layout: "list"
 ---
+Data and stories reflecting the impact of global synchronized meditation.

@@ -1,4 +1,6 @@
 ---
-title: "The Collective Library"
-description: "Revisiting past points of synchronicity from across the world."
+title: "Meditation Archive"
+description: "Chronicles of past synchronizations and shared silence."
+layout: "list"
 ---
+Relive the collective energy of our past planetary events.

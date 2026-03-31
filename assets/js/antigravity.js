@@ -57,10 +57,10 @@ function initHeroCountdown() {
 
         countdownEl.innerHTML = `
             <div class="flex gap-4 text-center">
-                <div><span class="text-3xl font-bold">${days}</span><p class="text-[8px] uppercase">Days</p></div>
-                <div><span class="text-3xl font-bold">${hours}</span><p class="text-[8px] uppercase">Hrs</p></div>
-                <div><span class="text-3xl font-bold">${mins}</span><p class="text-[8px] uppercase">Min</p></div>
-                <div><span class="text-3xl font-bold">${secs}</span><p class="text-[8px] uppercase">Sec</p></div>
+                <div><span class="countdown-num">${String(days).padStart(2, '0')}</span><p class="text-[8px] uppercase">Days</p></div>
+                <div><span class="countdown-num">${String(hours).padStart(2, '0')}</span><p class="text-[8px] uppercase">Hrs</p></div>
+                <div><span class="countdown-num">${String(mins).padStart(2, '0')}</span><p class="text-[8px] uppercase">Min</p></div>
+                <div><span class="countdown-num">${String(secs).padStart(2, '0')}</span><p class="text-[8px] uppercase">Sec</p></div>
             </div>
         `;
     }

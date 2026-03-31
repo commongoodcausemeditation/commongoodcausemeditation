@@ -15,6 +15,71 @@
     align-items: center;
 }
 
+/* Hamburger Menu Button (hidden on desktop) */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: 1.5px solid var(--color-border);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+}
+
+.hamburger-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--color-bg);
+    z-index: 3000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mobile-nav-overlay.active {
+    display: flex;
+}
+
+.mobile-nav-overlay a {
+    font-size: 1.25rem;
+    font-weight: 800;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.mobile-nav-overlay a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Footer Base */
 footer {
     padding: 8rem 0 4rem;
@@ -83,4 +148,46 @@ footer {
     opacity: 0.4;
     border-top: 1px solid var(--color-border);
     padding-top: 3rem;
+}
+
+/* --- MOBILE RESPONSIVE HEADER/FOOTER --- */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .fixed-nav .container > .flex.items-center.gap-8 {
+        gap: 0.75rem;
+    }
+
+    #dual-clock {
+        display: none !important;
+    }
+
+    .nav-brand h1,
+    .fixed-nav h1 {
+        font-size: 1rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    .nav-brand span {
+        display: none !important;
+    }
+
+    footer {
+        padding: 4rem 0 2rem;
+        margin-top: 2rem;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
 }

@@ -107,6 +107,82 @@ a {
     gap: 2.5rem;
 }
 
+/* --- Countdown Timer --- */
+.countdown-num {
+    font-size: 2rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2.5ch;
+    text-align: center;
+}
+
+/* --- Scroll System --- */
+.scroll-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0; /* First card aligns to container edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.scroll-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+}
+
+.scroll-indicator svg {
+    width: 16px;
+    height: 16px;
+    animation: bounce-x 2s infinite;
+}
+
+@keyframes bounce-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+.scroll-item {
+    flex: 0 0 calc(33.333% - 1.333rem);
+    min-width: 320px;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.scroll-item:first-child {
+    scroll-snap-align: start;
+}
+
+.scroll-item > .glass-card {
+    min-height: 400px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .md-grid-2 {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -115,7 +191,99 @@ a {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* --- BREAKPOINT: Small Laptop / 13" (1024-1366px) --- */
+@media (max-width: 1366px) {
+    .scroll-item {
+        flex: 0 0 calc(33.333% - 1.333rem);
+        min-width: 300px;
+    }
+}
+
+/* --- BREAKPOINT: Tablet (768-1024px) --- */
+@media (max-width: 1024px) {
+    .scroll-item {
+        flex: 0 0 calc(50% - 1rem);
+        min-width: 300px;
+    }
+
+    .scroll-container {
+        gap: 1.5rem;
+    }
+
+    .glass-card {
+        padding: 2.5rem;
+        border-radius: 2rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .countdown-num {
+        font-size: 1.75rem;
+    }
+}
+
+/* --- BREAKPOINT: Large Phone / 6.8" (max 480px) --- */
+@media (max-width: 480px) {
+    :root {
+        --nav-height: 64px;
+    }
+
+    body {
+        padding-top: calc(var(--nav-height) + 0.75rem);
+    }
+
+    .container {
+        padding: 0 0.875rem;
+    }
+
+    .scroll-item {
+        flex: 0 0 88%;
+        min-width: 240px;
+    }
+
+    .scroll-item > .glass-card {
+        height: auto;
+        min-height: 340px;
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .hero-icon {
+        font-size: 3.5rem;
+    }
+
+    .countdown-num {
+        font-size: 1.5rem;
+        min-width: 2ch;
+    }
+
+    .section-pad {
+        padding: 1.5rem 0;
+    }
+
+    .spacer-m { height: 2rem; }
+}
+
+/* --- BREAKPOINT: Mobile (max 768px) --- */
 @media (max-width: 768px) {
+    :root {
+        --nav-height: 70px;
+    }
+
+    body {
+        padding-top: calc(var(--nav-height) + 1rem);
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
     .md\:flex-row {
         flex-direction: column;
     }
@@ -124,6 +292,72 @@ a {
     .lg-grid-3 {
         grid-template-columns: 1fr;
     }
+
+    .scroll-item {
+        flex: 0 0 85%;
+        min-width: 260px;
+    }
+
+    .scroll-item > .glass-card {
+        height: auto;
+        min-height: 360px;
+        padding: 1.75rem;
+        border-radius: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .scroll-container {
+        gap: 1.25rem;
+    }
+
+    .scroll-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .scroll-header > .flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Typography scaling */
+    .text-9xl { font-size: 4rem; }
+    .text-8xl { font-size: 3rem; }
+    .text-6xl { font-size: 2.5rem; }
+    .text-5xl { font-size: 2rem; }
+    .text-4xl { font-size: 1.5rem; }
+    .text-3xl { font-size: 1.25rem; }
+
+    .glass-card {
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .spacer-m { height: 3rem; }
+    .spacer-xl { height: 6rem; }
+
+    .section-pad {
+        padding: 2rem 0;
+    }
+
+    section h2 {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .py-20 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .mb-16 { margin-bottom: 2rem; }
+    .mb-12 { margin-bottom: 1.5rem; }
 }
 
 @media (min-width: 769px) {
@@ -313,6 +547,16 @@ a {
     font-size: 8rem;
 }
 
+/* --- Hero Responsive --- */
+.hero-title {
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+}
+
+.hero-icon {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+}
+
 /* --- Components --- */
 .fixed-nav {
     position: fixed;
@@ -465,11 +709,11 @@ a {
 } */
 
 section h2 {
-    margin-bottom: 5rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 .glass-card {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* Add vertical flow spacers */

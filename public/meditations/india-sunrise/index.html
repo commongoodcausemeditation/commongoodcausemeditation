@@ -18,11 +18,22 @@
     
     <link rel="stylesheet" href="/commongoodcausemeditation/css/header-footer.css">
     <link rel="stylesheet" href="/commongoodcausemeditation/css/zen-modern.css">
+
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#8E936D">
+    <link rel="apple-touch-icon" href="https://api.iconify.design/heroicons:sparkles.svg?color=%238E936D">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body class="transition-colors duration-200">
-    <div style="background: blue; color: white; padding: 10px; font-weight: bold; text-align: center; position: relative; z-index: 10001;">
-        GLOBAL DEBUG: SITE PAGES = 17 | MEDITATIONS = 9 | CURRENT TYPE = event
-    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
     <header class="fixed-nav">
     <div class="container flex justify-between items-center">
         
@@ -50,9 +61,23 @@
             <button id="theme-toggle" title="Toggle Mode" style="margin: 0;">
                 <svg id="theme-icon" fill="none" viewBox="0 0 24 24"></svg>
             </button>
+            
+            <button class="hamburger-btn" onclick="document.getElementById('mobile-nav').classList.add('active')" aria-label="Open menu">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            </button>
         </div>
     </div>
 </header>
+
+
+<div id="mobile-nav" class="mobile-nav-overlay">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('active')" aria-label="Close menu">&times;</button>
+    <a href="/" onclick="document.getElementById('mobile-nav').classList.remove('active')">Home</a>
+    <a href="/commongoodcausemeditation/upcoming" onclick="document.getElementById('mobile-nav').classList.remove('active')">Upcoming</a>
+    <a href="/commongoodcausemeditation/archive" onclick="document.getElementById('mobile-nav').classList.remove('active')">Archive</a>
+    <a href="/commongoodcausemeditation/impact" onclick="document.getElementById('mobile-nav').classList.remove('active')">Impact</a>
+    <a href="/commongoodcausemeditation/community" onclick="document.getElementById('mobile-nav').classList.remove('active')">Community</a>
+</div>
 
     <main id="main-content" class="min-h-screen">
         

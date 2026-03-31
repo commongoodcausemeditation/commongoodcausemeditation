@@ -18,11 +18,22 @@
     {{ $style := resources.Get "css/zen-modern.css" }}
     <link rel="stylesheet" href="{{ (resources.Get "css/header-footer.css").RelPermalink }}">
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <!-- PWA Setup -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#8E936D">
+    <link rel="apple-touch-icon" href="https://api.iconify.design/heroicons:sparkles.svg?color=%238E936D">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body class="transition-colors duration-200">
-    <div style="background: blue; color: white; padding: 10px; font-weight: bold; text-align: center; position: relative; z-index: 10001;">
-        GLOBAL DEBUG: SITE PAGES = {{ len site.Pages }} | MEDITATIONS = {{ len (where site.RegularPages "Section" "meditations") }} | CURRENT TYPE = {{ .Type }}
-    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
     {{ partial "header.html" . }}
     <main id="main-content" class="min-h-screen">
         {{ block "main" . }}{{ end }}

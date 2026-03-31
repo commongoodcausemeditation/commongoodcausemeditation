@@ -2,13 +2,6 @@
 
 <!-- Hero Section: Featured Global Event -->
 <section class="section-pad">
-    <div style="background: green; color: white; padding: 10px; font-weight: bold; text-align: center;">
-        LISTING TITLES:
-        {{ range (where (where site.Pages "Section" "meditations") "Kind" "page") }}
-            [{{ .Title }}]
-        {{ end }}
-    </div>
-
     <div class="container">
         {{ $meditation_pages := where site.RegularPages "Section" "meditations" }}
         
@@ -17,14 +10,14 @@
         <div class="glass-card max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div class="flex-1 space-y-6">
                 <span class="inline-block px-4 py-1 rounded-full bg-[var(--color-highlight)] text-white text-[10px] uppercase font-bold tracking-widest">Featured Global Event</span>
-                <h2 class="text-5xl font-serif tracking-tight leading-tight">{{ .Title }}</h2>
+                <h2 class="hero-title font-serif tracking-tight leading-tight">{{ .Title }}</h2>
                 <p class="text-lg opacity-70">{{ .Params.description }}</p>
                 <div class="flex items-center gap-8 pt-4">
                     <div id="hero-countdown" data-target-time="{{ .Params.utc_time }}"></div>
                     <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')" class="btn btn-primary">Enter Space</button>
                 </div>
             </div>
-            <div class="text-9xl">{{ .Params.icon }}</div>
+            <div class="hero-icon">{{ .Params.icon }}</div>
         </div>
         {{ end }}
     </div>
@@ -32,21 +25,28 @@
 
 <div class="spacer-m"></div>
 
-<!-- Global Events Section -->
+<!-- Global Synchronizations Section -->
 <section class="section-pad">
     <div class="container">
-        <div class="flex items-baseline justify-between mb-12">
+        <div class="scroll-header">
             <div>
                 <h2 class="text-4xl font-serif">Global Synchronizations</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Unifying humanity through presence</p>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Unifying humanity through presence</p>
             </div>
-            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#global" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            <div class="flex items-center gap-6">
+                <div class="scroll-indicator">
+                    <span>Swipe</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+                <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#global" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            </div>
         </div>
-        <div class="grid md-grid-2 lg-grid-3">
-            {{ range $meditation_pages }}
-                {{ if eq .Params.group "global" }}
+        <div class="scroll-container">
+            {{ $global_events := where $meditation_pages ".Params.group" "global" }}
+            {{ range first 10 $global_events }}
+                <div class="scroll-item">
                     {{ partial "meditation-card.html" . }}
-                {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>
@@ -54,21 +54,28 @@
 
 <div class="spacer-m"></div>
 
-<!-- Country-Wise Section -->
+<!-- Regional Solidarity Section -->
 <section class="section-pad bg-[rgba(178,172,136,0.05)]">
     <div class="container">
-        <div class="flex items-baseline justify-between mb-12">
+        <div class="scroll-header">
             <div>
                 <h2 class="text-4xl font-serif">Regional Solidarity</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Localized rhythms and community circles</p>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Localized rhythms and community circles</p>
             </div>
-            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#country" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            <div class="flex items-center gap-6">
+                <div class="scroll-indicator">
+                    <span>Swipe</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+                <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#country" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            </div>
         </div>
-        <div class="grid md-grid-2 lg-grid-3">
-            {{ range $meditation_pages }}
-                {{ if eq .Params.group "country" }}
+        <div class="scroll-container">
+            {{ $regional_events := where $meditation_pages ".Params.group" "country" }}
+            {{ range first 10 $regional_events }}
+                <div class="scroll-item">
                     {{ partial "meditation-card.html" . }}
-                {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>
@@ -79,18 +86,25 @@
 <!-- Personal Growth Section -->
 <section class="section-pad">
     <div class="container">
-        <div class="flex items-baseline justify-between mb-12">
+        <div class="scroll-header">
             <div>
                 <h2 class="text-4xl font-serif">Personal Growth</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold mt-2">Sacred spaces for individual transformation</p>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Sacred spaces for individual transformation</p>
             </div>
-            <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#personal" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            <div class="flex items-center gap-6">
+                <div class="scroll-indicator">
+                    <span>Swipe</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+                <a href="{{ ((site.GetPage "/upcoming").RelPermalink) }}#personal" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+            </div>
         </div>
-        <div class="grid md-grid-2 lg-grid-3">
-            {{ range $meditation_pages }}
-                {{ if eq .Params.group "personal" }}
+        <div class="scroll-container">
+            {{ $personal_events := where $meditation_pages ".Params.group" "personal" }}
+            {{ range first 10 $personal_events }}
+                <div class="scroll-item">
                     {{ partial "meditation-card.html" . }}
-                {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>

@@ -3,8 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Common Good Cause Meditation — A global hub for synchronized meditation sessions to foster world peace, community healing, and ecological restoration.">
+    <meta name="author" content="Common Good Cause Meditation Team">
+    <link rel="canonical" href="{{ .Permalink }}">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1999/xlink' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🕊️</text></svg>">
+
     <!-- Critical Resets -->
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,9 +21,10 @@
         nav a:hover { opacity: 1; }
     </style>
 
-    {{ $style := resources.Get "css/zen-modern.css" }}
-    <link rel="stylesheet" href="{{ (resources.Get "css/header-footer.css").RelPermalink }}">
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $style_main := resources.Get "css/zen-modern.css" }}
+    {{ $style_head := resources.Get "css/header-footer.css" }}
+    <link rel="stylesheet" href="{{ $style_head.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $style_main.RelPermalink }}">
 
     <!-- PWA Setup -->
     <link rel="manifest" href="/manifest.json">
@@ -45,7 +52,7 @@
     <!-- Final Script Setup (Non-fingerprinted for better dev speed) -->
     {{ range (slice "js/clocks.js" "js/theme-toggle.js" "js/antigravity.js" "js/mixer.js" "js/timer.js" "js/participation.js") }}
     {{ with resources.Get . }}
-        <script src="{{ .RelPermalink }}"></script>
+        <script src="{{ .RelPermalink }}" defer></script>
     {{ end }}
     {{ end }}
 

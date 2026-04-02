@@ -1,96 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>CommonGoodCauseMeditation</title>
-    <link>http://localhost:1313/commongoodcausemeditation/</link>
-    <description>Recent content on CommonGoodCauseMeditation</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2026 10:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/commongoodcausemeditation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Amazonian Green Breath</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/amazon-regen/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/amazon-regen/</guid>
-      <description>&lt;h2 id=&#34;breathing-with-the-forest&#34;&gt;Breathing with the Forest&lt;/h2&gt;&#xA;&lt;p&gt;When we meditate for the Amazon, we meditate for ourselves. Our breath is inextricably linked to the health of the rainforest.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Full Moon Illumination</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/full-moon-growth/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/full-moon-growth/</guid>
-      <description>&lt;h2 id=&#34;shining-light-on-the-self&#34;&gt;Shining Light on the Self&lt;/h2&gt;&#xA;&lt;p&gt;Personal growth requires moments of absolute honesty. Use this lunar window to illuminate your path forward.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Gratitude Saturday: Weekly Appreciation</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/gratitude-saturday/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/gratitude-saturday/</guid>
-      <description>&lt;h2 id=&#34;integrating-the-week&#34;&gt;Integrating the Week&lt;/h2&gt;&#xA;&lt;p&gt;Gratitude is the bridge that turns what we have into enough. Join us in this moment of integrated appreciation.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Indian Sunrise Solidarity</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/india-sunrise/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/india-sunrise/</guid>
-      <description>&lt;h2 id=&#34;awakening-together&#34;&gt;Awakening Together&lt;/h2&gt;&#xA;&lt;p&gt;Starting the day with collective silence creates a ripple effect of calm that lasts throughout the week. Join your fellow citizens in this moment of shared presence.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mindful Monday: Weekly Reset</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/mindful-monday/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/mindful-monday/</guid>
-      <description>&lt;h2 id=&#34;navigating-the-week&#34;&gt;Navigating the Week&lt;/h2&gt;&#xA;&lt;p&gt;A week started in stillness is a week lived with purpose. Set your internal compass every Monday morning.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Planetary Healing Pulse</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/planetary-healing/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/planetary-healing/</guid>
-      <description>&lt;h2 id=&#34;resonance-of-care&#34;&gt;Resonance of Care&lt;/h2&gt;&#xA;&lt;p&gt;When we come together in heart-coherence, the collective power of our intention is amplified beyond measure.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>World Peace Day Synchronization</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/world-peace-sync/</link>
-      <pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/world-peace-sync/</guid>
-      <description>&lt;h2 id=&#34;the-power-of-unity&#34;&gt;The Power of Unity&lt;/h2&gt;&#xA;&lt;p&gt;The World Peace Day Synchronization is more than just a meditation; it&amp;rsquo;s a statement of global togetherness. When we breathe together, we bridge the gaps between cultures and continents.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Rainforest Reforestation</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/rainforest-reforestation/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/rainforest-reforestation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Summer Solstice Global Unity</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/summer-solstice-unity/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/summer-solstice-unity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Inner Fire</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/</guid>
-      <description>&lt;h1 id=&#34;inner-fire&#34;&gt;Inner Fire&lt;/h1&gt;&#xA;&lt;p&gt;Transform personal energy into action.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ocean Restoration</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/</guid>
-      <description>&lt;h1 id=&#34;ocean-restoration&#34;&gt;Ocean Restoration&lt;/h1&gt;&#xA;&lt;p&gt;Group intent for healing our oceans.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Universal Harmony</title>
-      <link>http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/</guid>
-      <description>&lt;h1 id=&#34;universal-harmony&#34;&gt;Universal Harmony&lt;/h1&gt;&#xA;&lt;p&gt;Join the global synchronization for peace.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CommonGoodCauseMeditation</title><link>https://puneethkanna.github.io/commongoodcausemeditation/</link><description>Recent content on CommonGoodCauseMeditation</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 29 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://puneethkanna.github.io/commongoodcausemeditation/index.xml" rel="self" type="application/rss+xml"/><item><title>Amazonian Green Breath</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/amazon-regen/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/amazon-regen/</guid><description>&lt;h2 id="breathing-with-the-forest"&gt;Breathing with the Forest&lt;/h2&gt;
+&lt;p&gt;When we meditate for the Amazon, we meditate for ourselves. Our breath is inextricably linked to the health of the rainforest.&lt;/p&gt;</description></item><item><title>Full Moon Illumination</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/full-moon-growth/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/full-moon-growth/</guid><description>&lt;h2 id="shining-light-on-the-self"&gt;Shining Light on the Self&lt;/h2&gt;
+&lt;p&gt;Personal growth requires moments of absolute honesty. Use this lunar window to illuminate your path forward.&lt;/p&gt;</description></item><item><title>Gratitude Saturday: Weekly Appreciation</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/gratitude-saturday/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/gratitude-saturday/</guid><description>&lt;h2 id="integrating-the-week"&gt;Integrating the Week&lt;/h2&gt;
+&lt;p&gt;Gratitude is the bridge that turns what we have into enough. Join us in this moment of integrated appreciation.&lt;/p&gt;</description></item><item><title>Indian Sunrise Solidarity</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/india-sunrise/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/india-sunrise/</guid><description>&lt;h2 id="awakening-together"&gt;Awakening Together&lt;/h2&gt;
+&lt;p&gt;Starting the day with collective silence creates a ripple effect of calm that lasts throughout the week. Join your fellow citizens in this moment of shared presence.&lt;/p&gt;</description></item><item><title>Mindful Monday: Weekly Reset</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/mindful-monday/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/mindful-monday/</guid><description>&lt;h2 id="navigating-the-week"&gt;Navigating the Week&lt;/h2&gt;
+&lt;p&gt;A week started in stillness is a week lived with purpose. Set your internal compass every Monday morning.&lt;/p&gt;</description></item><item><title>Planetary Healing Pulse</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/planetary-healing/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/planetary-healing/</guid><description>&lt;h2 id="resonance-of-care"&gt;Resonance of Care&lt;/h2&gt;
+&lt;p&gt;When we come together in heart-coherence, the collective power of our intention is amplified beyond measure.&lt;/p&gt;</description></item><item><title>World Peace Day Synchronization</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/world-peace-sync/</link><pubDate>Sun, 29 Mar 2026 10:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/world-peace-sync/</guid><description>&lt;h2 id="the-power-of-unity"&gt;The Power of Unity&lt;/h2&gt;
+&lt;p&gt;The World Peace Day Synchronization is more than just a meditation; it&amp;rsquo;s a statement of global togetherness. When we breathe together, we bridge the gaps between cultures and continents.&lt;/p&gt;</description></item><item><title>Rainforest Reforestation</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/rainforest-reforestation/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/rainforest-reforestation/</guid><description/></item><item><title>Summer Solstice Global Unity</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/summer-solstice-unity/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/summer-solstice-unity/</guid><description>&lt;h2 id="harmonic-resonance"&gt;Harmonic Resonance&lt;/h2&gt;
+&lt;p&gt;The solstice is a window of peak opportunity for collective coherence. When we align our focus during this astronomical event, our impact is exponentially increased.&lt;/p&gt;</description></item><item><title>Inner Fire</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/inner-fire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/inner-fire/</guid><description>&lt;h1 id="inner-fire"&gt;Inner Fire&lt;/h1&gt;
+&lt;p&gt;Transform personal energy into action.&lt;/p&gt;</description></item><item><title>Ocean Restoration</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/ocean-restoration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/ocean-restoration/</guid><description>&lt;h1 id="ocean-restoration"&gt;Ocean Restoration&lt;/h1&gt;
+&lt;p&gt;Group intent for healing our oceans.&lt;/p&gt;</description></item><item><title>Universal Harmony</title><link>https://puneethkanna.github.io/commongoodcausemeditation/meditations/universal-harmony/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://puneethkanna.github.io/commongoodcausemeditation/meditations/universal-harmony/</guid><description>&lt;h1 id="universal-harmony"&gt;Universal Harmony&lt;/h1&gt;
+&lt;p&gt;Join the global synchronization for peace.&lt;/p&gt;</description></item></channel></rss>

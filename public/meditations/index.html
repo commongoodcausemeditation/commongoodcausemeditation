@@ -1,389 +1,55 @@
-<!DOCTYPE html>
-<html lang="en-us" data-theme="light">
-<head><script src="/commongoodcausemeditation/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=commongoodcausemeditation/livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meditations | CommonGoodCauseMeditation</title>
-    
-    
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        a { color: inherit; text-decoration: none; }
-        .hidden { display: none !important; }
-        [data-theme='dark'] { background: #1A1A1A; color: #E0E0E0; }
-        nav a { transition: opacity 0.2s; opacity: 0.6; }
-        nav a:hover { opacity: 1; }
-    </style>
-
-    
-    <link rel="stylesheet" href="/commongoodcausemeditation/css/header-footer.css">
-    <link rel="stylesheet" href="/commongoodcausemeditation/css/zen-modern.css">
-
-    
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#8E936D">
-    <link rel="apple-touch-icon" href="https://api.iconify.design/heroicons:sparkles.svg?color=%238E936D">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-</head>
-<body class="transition-colors duration-200">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script>
-    <header class="fixed-nav">
-    <div class="container flex justify-between items-center">
-        
-        <a href="/" class="nav-brand" style="display: flex; flex-direction: column; gap: 4px;">
-             <div class="flex items-center gap-3">
-                 <div style="background: var(--color-accent); width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1rem;">🕊️</div>
-                 <h1 style="font-size: 1.5rem; margin: 0; font-weight: 800;">CommonGoodCauseMeditation</h1>
-             </div>
-             <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.25em; opacity: 0.5; font-weight: 800; margin-left: 42px;">Planetary Synchronicity Hub</span>
-        </a>
-        
-        
-        <nav class="nav-links">
-            <a href="/commongoodcausemeditation/upcoming" style="font-weight: 800; opacity: 1; color: var(--color-text);">Upcoming</a>
-            <a href="/commongoodcausemeditation/archive" style="font-weight: 800; opacity: 1; color: var(--color-text);">Archive</a>
-            <a href="/commongoodcausemeditation/impact" style="font-weight: 800; opacity: 1; color: var(--color-text);">Impact</a>
-            <a href="/commongoodcausemeditation/community" style="font-weight: 800; opacity: 1; color: var(--color-text);">Community</a>
-        </nav>
-
-        
-        <div class="flex items-center gap-8">
-            <div id="dual-clock" style="font-size: 0.85rem; font-weight: 800; letter-spacing: -0.01em; border-right: 1.5px solid var(--color-border); padding-right: 2rem; white-space: nowrap;">
-                <span id="clocks-combined">00:00 IST | 00:00 UTC</span>
-            </div>
-            <button id="theme-toggle" title="Toggle Mode" style="margin: 0;">
-                <svg id="theme-icon" fill="none" viewBox="0 0 24 24"></svg>
-            </button>
-            
-            <button class="hamburger-btn" onclick="document.getElementById('mobile-nav').classList.add('active')" aria-label="Open menu">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
-            </button>
-        </div>
-    </div>
-</header>
-
-
-<div id="mobile-nav" class="mobile-nav-overlay">
-    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('active')" aria-label="Close menu">&times;</button>
-    <a href="/" onclick="document.getElementById('mobile-nav').classList.remove('active')">Home</a>
-    <a href="/commongoodcausemeditation/upcoming" onclick="document.getElementById('mobile-nav').classList.remove('active')">Upcoming</a>
-    <a href="/commongoodcausemeditation/archive" onclick="document.getElementById('mobile-nav').classList.remove('active')">Archive</a>
-    <a href="/commongoodcausemeditation/impact" onclick="document.getElementById('mobile-nav').classList.remove('active')">Impact</a>
-    <a href="/commongoodcausemeditation/community" onclick="document.getElementById('mobile-nav').classList.remove('active')">Community</a>
-    
-    <button class="menu-theme-toggle" onclick="document.getElementById('theme-toggle').click()" title="Toggle Mode">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-    </button>
-</div>
-
-    <main id="main-content" class="min-h-screen">
-        
-<section class="section-pad">
-    <div class="container text-center mb-16">
-        <h2 class="text-5xl font-serif mb-4">Meditations</h2>
-        <p class="text-lg opacity-60">Global synchronized meditation sessions for causes and special events.</p>
-    </div>
-    <div class="container grid md-grid-2 gap-10">
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌿</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Amazonian Green Breath</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the &#39;Lungs of the Planet&#39;.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('amazon-regen-focus', 'Amazonian Green Breath', '🌿', 'Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the \u0027Lungs of the Planet\u0027.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/amazon-regen/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌕</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Full Moon Illumination</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('full-moon-personal-growth', 'Full Moon Illumination', '🌕', 'Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/full-moon-growth/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌻</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Gratitude Saturday: Weekly Appreciation</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('gratitude-saturday-growth', 'Gratitude Saturday: Weekly Appreciation', '🌻', 'A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/gratitude-saturday/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌅</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Country Focus</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Indian Sunrise Solidarity</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('india-sunrise-unity', 'Indian Sunrise Solidarity', '🌅', 'A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/india-sunrise/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🧭</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Mindful Monday: Weekly Reset</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('mindful-monday-growth', 'Mindful Monday: Weekly Reset', '🧭', 'Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/mindful-monday/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">💖</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Healing</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Planetary Healing Pulse</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('planetary-healing-pulse-apr-2026', 'Planetary Healing Pulse', '💖', 'A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/planetary-healing/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🕊️</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Peace</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">World Peace Day Synchronization</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('world-peace-sync-2026', 'World Peace Day Synchronization', '🕊️', 'Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/world-peace-sync/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌿</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Earth Healing</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Rainforest Reforestation</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Sync your breath with the heartbeat of the Amazon as we visualize moisture returning to the canopy.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('rainforest-reforestation', 'Rainforest Reforestation', '🌿', 'Sync your breath with the heartbeat of the Amazon as we visualize moisture returning to the canopy.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/rainforest-reforestation/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">☀️</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Special Event</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Summer Solstice Global Unity</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Join millions as we welcome the peak of the Sun&#39;s light to radiate peace across all continents.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('summer-solstice-unity', 'Summer Solstice Global Unity', '☀️', 'Join millions as we welcome the peak of the Sun\u0027s light to radiate peace across all continents.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/summer-solstice-unity/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🔥</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Inner Fire</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Ignite your creative energy and focus.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('p-inner-fire', 'Inner Fire', '🔥', 'Ignite your creative energy and focus.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🌊</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Ocean Restoration</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Healing our shared waters through group intent.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('r-ocean', 'Ocean Restoration', '🌊', 'Healing our shared waters through group intent.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-        <div class="glass-card flex flex-col h-full">
-            <div class="flex justify-between mb-8">
-                <span class="text-4xl">🕊️</span>
-                <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Peace</span>
-            </div>
-            <h3 class="text-xl font-serif mb-4">Universal Harmony</h3>
-            <p class="text-sm opacity-60 flex-1 mb-8">Synchronize with thousands for global peace.</p>
-            <div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                <button onclick="startMeditation('g-harmony', 'Universal Harmony', '🕊️', 'Synchronize with thousands for global peace.')" class="btn btn-primary text-xs py-2 px-6">Join</button>
-                <a href="http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/" class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-    </main>
-    <footer>
-    <div class="container">
-        
-        <div class="footer-brand">
-            <h2>CommonGoodCauseMeditation</h2>
-            <p>Synchronizing global meditation for collective healing and world peace.</p>
-        </div>
-
-        
-        <div class="footer-quote">
-            <div class="icon">🕊️</div>
-            <blockquote>"Peace begins with a single deep breath."</blockquote>
-        </div>
-
-        
-        <nav class="footer-nav">
-            <a href="#">Privacy</a>
-            <a href="#">Community Map</a>
-            <a href="#">About</a>
-        </nav>
-
-        
-        <div class="footer-copy">
-            &copy; 2026 CommonGoodCauseMeditation. Built with Zen-Modern Principles.
-        </div>
-    </div>
-</footer>
-
-
-    <div id="meditation-overlay" class="overlay hidden opacity-0 transition-opacity duration-500">
-    <div class="relative w-full h-full flex flex-col items-center justify-center text-center px-6">
-        
-        
-        <div class="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden">
-            <div class="breathing-circle"></div>
-        </div>
-
-        
-        <div class="space-y-12 max-w-2xl">
-            <header>
-                <div id="overlay-icon" class="text-6xl mb-4">🌿</div>
-                <h2 id="overlay-title" class="text-4xl font-serif">Deep Breath Initiation</h2>
-            </header>
-
-            <div id="overlay-countdown" class="text-8xl font-bold tracking-tighter tabular-nums drop-shadow-xl">
-                20:00
-            </div>
-
-            <p id="overlay-intent" class="text-xl opacity-60 italic font-serif">
-                "Harmonizing with the rhythm of the rainforest."
-            </p>
-
-            <div class="flex flex-col items-center gap-6">
-                
-                <div class="sound-mixer p-6 glass-card rounded-2xl w-full max-w-sm">
-    <h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-4">Ambient Soundscape</h3>
-    <div class="grid grid-cols-2 gap-4">
-        
-        <div class="flex flex-col gap-2">
-            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="rainforest">
-                🌿 Rainforest
-            </button>
-            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="rainforest" min="0" max="1" step="0.1" value="0.5">
-        </div>
-        
-        <div class="flex flex-col gap-2">
-            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="space">
-                ✨ Deep Space
-            </button>
-            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="space" min="0" max="1" step="0.1" value="0.5">
-        </div>
-        
-        <div class="flex flex-col gap-2">
-            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="bowls">
-                🥣 Singing Bowls
-            </button>
-            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="bowls" min="0" max="1" step="0.1" value="0.5">
-        </div>
-        
-        <div class="flex flex-col gap-2">
-            <button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound="white">
-                🌫️ White Noise
-            </button>
-            <input type="range" class="volume-slider w-full accent-[var(--color-accent)]" data-sound="white" min="0" max="1" step="0.1" value="0.5">
-        </div>
-    </div>
-</div>
-
-                
-                <button id="finish-meditation" class="btn btn-primary mt-8">
-                    Finish Session
-                </button>
-            </div>
-        </div>
-
-        
-        <button id="close-overlay" class="absolute top-8 right-8 p-3 hover:rotate-90 transition-transform cursor-pointer" aria-label="Close">
-            <svg class="w-8 h-8 opacity-40 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-    </div>
-</div>
-
-
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/clocks.js"></script>
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/theme-toggle.js"></script>
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/antigravity.js"></script>
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/mixer.js"></script>
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/timer.js"></script>
-    
-    
-    
-        <script src="/commongoodcausemeditation/js/participation.js"></script>
-    
-    
-
-    
-</body>
-</html>
+<!doctype html><html lang=en-us data-theme=light><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Common Good Cause Meditation — A global hub for synchronized meditation sessions to foster world peace, community healing, and ecological restoration."><meta name=author content="Common Good Cause Meditation Team"><link rel=canonical href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/><title>Meditations | CommonGoodCauseMeditation</title><link rel=icon type=image/svg+xml href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1999/xlink' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🕊️</text></svg>"><style>*{box-sizing:border-box;margin:0;padding:0}a{color:inherit;text-decoration:none}.hidden{display:none!important}[data-theme=dark]{background:#1a1a1a;color:#e0e0e0}nav a{transition:opacity .2s;opacity:.6}nav a:hover{opacity:1}</style><link rel=stylesheet href=/commongoodcausemeditation/css/header-footer.css><link rel=stylesheet href=/commongoodcausemeditation/css/zen-modern.css><link rel=manifest href=/manifest.json><meta name=theme-color content="#8E936D"><link rel=apple-touch-icon href="https://api.iconify.design/heroicons:sparkles.svg?color=%238E936D"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"></head><body class="transition-colors duration-200"><script>"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js")})</script><header class=fixed-nav><div class="container flex justify-between items-center"><a href=/ class=nav-brand style=display:flex;flex-direction:column;gap:4px><div class="flex items-center gap-3"><div style=background:var(--color-accent);width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.25rem>🕊️</div><h1 style=font-size:1.75rem;margin:0;font-weight:800>CommonGoodCauseMeditation</h1></div><span style=font-size:.75rem;text-transform:uppercase;letter-spacing:.25em;opacity:.5;font-weight:800;margin-left:52px>Planetary Synchronicity Hub</span></a><nav class=nav-links><a href=/commongoodcausemeditation/upcoming style=font-weight:800;opacity:1;color:var(--color-text)>Upcoming</a>
+<a href=/commongoodcausemeditation/archive style=font-weight:800;opacity:1;color:var(--color-text)>Archive</a>
+<a href=/commongoodcausemeditation/impact style=font-weight:800;opacity:1;color:var(--color-text)>Impact</a>
+<a href=/commongoodcausemeditation/community style=font-weight:800;opacity:1;color:var(--color-text)>Community</a></nav><div class="flex items-center gap-8"><div id=dual-clock style="font-size:1rem;font-weight:800;letter-spacing:-.01em;border-right:1.5px solid var(--color-border);padding-right:2rem;white-space:nowrap"><span id=clocks-combined>00:00 IST | 00:00 UTC</span></div><button id=theme-toggle title="Toggle Mode" style=margin:0>
+<svg id="theme-icon" fill="none" viewBox="0 0 24 24"/>
+</button>
+<button class=hamburger-btn onclick='document.getElementById("mobile-nav").classList.add("active")' aria-label="Open menu">
+<svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button></div></div></header><div id=mobile-nav class=mobile-nav-overlay><button class=mobile-nav-close onclick='document.getElementById("mobile-nav").classList.remove("active")' aria-label="Close menu">&#215;</button>
+<a href=/ onclick='document.getElementById("mobile-nav").classList.remove("active")'>Home</a>
+<a href=/commongoodcausemeditation/upcoming onclick='document.getElementById("mobile-nav").classList.remove("active")'>Upcoming</a>
+<a href=/commongoodcausemeditation/archive onclick='document.getElementById("mobile-nav").classList.remove("active")'>Archive</a>
+<a href=/commongoodcausemeditation/impact onclick='document.getElementById("mobile-nav").classList.remove("active")'>Impact</a>
+<a href=/commongoodcausemeditation/community onclick='document.getElementById("mobile-nav").classList.remove("active")'>Community</a>
+<button class=menu-theme-toggle onclick='document.getElementById("theme-toggle").click()' title="Toggle Mode">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button></div><main id=main-content class=min-h-screen><section class=section-pad><div class="container text-center mb-16"><h2 class="text-5xl font-serif mb-4">Meditations</h2><p class="text-lg opacity-60">Global synchronized meditation sessions for causes and special events.</p></div><div class="container grid md-grid-2 gap-10"><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌿</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span></div><h3 class="text-xl font-serif mb-4">Amazonian Green Breath</h3><p class="text-sm opacity-60 flex-1 mb-8">Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the 'Lungs of the Planet'.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("amazon-regen-focus","Amazonian Green Breath","🌿","Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the &#39;Lungs of the Planet&#39;.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/amazon-regen/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌕</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span></div><h3 class="text-xl font-serif mb-4">Full Moon Illumination</h3><p class="text-sm opacity-60 flex-1 mb-8">Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("full-moon-personal-growth","Full Moon Illumination","🌕","Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/full-moon-growth/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌻</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span></div><h3 class="text-xl font-serif mb-4">Gratitude Saturday: Weekly Appreciation</h3><p class="text-sm opacity-60 flex-1 mb-8">A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("gratitude-saturday-growth","Gratitude Saturday: Weekly Appreciation","🌻","A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/gratitude-saturday/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌅</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Country Focus</span></div><h3 class="text-xl font-serif mb-4">Indian Sunrise Solidarity</h3><p class="text-sm opacity-60 flex-1 mb-8">A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("india-sunrise-unity","Indian Sunrise Solidarity","🌅","A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/india-sunrise/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🧭</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span></div><h3 class="text-xl font-serif mb-4">Mindful Monday: Weekly Reset</h3><p class="text-sm opacity-60 flex-1 mb-8">Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("mindful-monday-growth","Mindful Monday: Weekly Reset","🧭","Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/mindful-monday/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>💖</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Healing</span></div><h3 class="text-xl font-serif mb-4">Planetary Healing Pulse</h3><p class="text-sm opacity-60 flex-1 mb-8">A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("planetary-healing-pulse-apr-2026","Planetary Healing Pulse","💖","A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/planetary-healing/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🕊️</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Peace</span></div><h3 class="text-xl font-serif mb-4">World Peace Day Synchronization</h3><p class="text-sm opacity-60 flex-1 mb-8">Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("world-peace-sync-2026","World Peace Day Synchronization","🕊️","Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/world-peace-sync/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌿</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Earth Healing</span></div><h3 class="text-xl font-serif mb-4">Rainforest Reforestation</h3><p class="text-sm opacity-60 flex-1 mb-8">Sync your breath with the heartbeat of the Amazon as we visualize moisture returning to the canopy.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("rainforest-reforestation","Rainforest Reforestation","🌿","Sync your breath with the heartbeat of the Amazon as we visualize moisture returning to the canopy.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/rainforest-reforestation/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>☀️</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Special Event</span></div><h3 class="text-xl font-serif mb-4">Summer Solstice Global Unity</h3><p class="text-sm opacity-60 flex-1 mb-8">Join millions as we welcome the peak of the Sun's light to radiate peace across all continents.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("summer-solstice-unity","Summer Solstice Global Unity","☀️","Join millions as we welcome the peak of the Sun&#39;s light to radiate peace across all continents.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/summer-solstice-unity/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🔥</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal</span></div><h3 class="text-xl font-serif mb-4">Inner Fire</h3><p class="text-sm opacity-60 flex-1 mb-8">Ignite your creative energy and focus.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("p-inner-fire","Inner Fire","🔥","Ignite your creative energy and focus.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/inner-fire/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🌊</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span></div><h3 class="text-xl font-serif mb-4">Ocean Restoration</h3><p class="text-sm opacity-60 flex-1 mb-8">Healing our shared waters through group intent.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("r-ocean","Ocean Restoration","🌊","Healing our shared waters through group intent.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/ocean-restoration/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div><div class="glass-card flex flex-col h-full"><div class="flex justify-between mb-8"><span class=text-4xl>🕊️</span>
+<span class="text-xs uppercase opacity-40 font-bold tracking-widest">Peace</span></div><h3 class="text-xl font-serif mb-4">Universal Harmony</h3><p class="text-sm opacity-60 flex-1 mb-8">Synchronize with thousands for global peace.</p><div class="pt-6 border-t border-[var(--color-border)] flex items-center justify-between"><button onclick='startMeditation("g-harmony","Universal Harmony","🕊️","Synchronize with thousands for global peace.")' class="btn btn-primary text-xs py-2 px-6">Join</button>
+<a href=https://puneethkanna.github.io/commongoodcausemeditation/meditations/universal-harmony/ class="text-[9px] uppercase font-bold tracking-widest opacity-50">View Details</a></div></div></div></section></main><footer><div class=container><div class=footer-brand><h2>CommonGoodCauseMeditation</h2><p>Synchronizing global meditation for collective healing and world peace.</p></div><div class=footer-quote><div class=icon>🕊️</div><blockquote>"Peace begins with a single deep breath."</blockquote></div><nav class=footer-nav><a href=#>Privacy</a>
+<a href=#>Community Map</a>
+<a href=#>About</a></nav><div class=footer-copy>&copy; 2026 CommonGoodCauseMeditation. Built with Zen-Modern Principles.</div></div></footer><div id=meditation-overlay class="overlay hidden opacity-0 transition-opacity duration-500"><div class="relative w-full h-full flex flex-col items-center justify-center text-center px-6"><div class="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden"><div class=breathing-circle></div></div><div class="space-y-12 max-w-2xl"><header><div id=overlay-icon class="text-6xl mb-4">🌿</div><h2 id=overlay-title class="text-4xl font-serif">Deep Breath Initiation</h2></header><div id=overlay-countdown class="text-8xl font-bold tracking-tighter tabular-nums drop-shadow-xl">20:00</div><p id=overlay-intent class="text-xl opacity-60 italic font-serif">"Harmonizing with the rhythm of the rainforest."</p><div class="flex flex-col items-center gap-6"><div class="sound-mixer p-6 glass-card rounded-2xl w-full max-w-sm"><h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-4">Ambient Soundscape</h3><div class="grid grid-cols-2 gap-4"><div class="flex flex-col gap-2"><button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound=rainforest>
+🌿 Rainforest
+</button>
+<input type=range class="volume-slider w-full accent-[var(--color-accent)]" data-sound=rainforest min=0 max=1 step=0.1 value=0.5></div><div class="flex flex-col gap-2"><button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound=space>
+✨ Deep Space
+</button>
+<input type=range class="volume-slider w-full accent-[var(--color-accent)]" data-sound=space min=0 max=1 step=0.1 value=0.5></div><div class="flex flex-col gap-2"><button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound=bowls>
+🥣 Singing Bowls
+</button>
+<input type=range class="volume-slider w-full accent-[var(--color-accent)]" data-sound=bowls min=0 max=1 step=0.1 value=0.5></div><div class="flex flex-col gap-2"><button class="sound-toggle btn bg-[var(--color-surface)] py-2 text-[10px]" data-sound=white>
+🌫️ White Noise
+</button>
+<input type=range class="volume-slider w-full accent-[var(--color-accent)]" data-sound=white min=0 max=1 step=0.1 value=0.5></div></div></div><button id=finish-meditation class="btn btn-primary mt-8">
+Finish Session</button></div></div><button id=close-overlay class="absolute top-8 right-8 p-3 hover:rotate-90 transition-transform cursor-pointer" aria-label=Close>
+<svg class="w-8 h-8 opacity-40 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></button></div></div><script src=/commongoodcausemeditation/js/clocks.js defer></script><script src=/commongoodcausemeditation/js/theme-toggle.js defer></script><script src=/commongoodcausemeditation/js/antigravity.js defer></script><script src=/commongoodcausemeditation/js/mixer.js defer></script><script src=/commongoodcausemeditation/js/timer.js defer></script><script src=/commongoodcausemeditation/js/participation.js defer></script></body></html>

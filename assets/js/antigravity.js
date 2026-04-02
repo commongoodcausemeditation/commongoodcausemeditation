@@ -1,6 +1,7 @@
 /**
  * ANTIGRAVITY TIME ENGINE
  * Synchronizes UTC meditation times to local visitor timezones.
+ * Format: Local TZ | UTC (e.g. 23:54 IST | 18:24 UTC)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,8 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroCountdown();
 });
 
+/**
+ * Get the short timezone abbreviation for the user's locale.
+ * e.g. "IST", "EST", "CET", "PST"
+ */
+function getLocalTzAbbr() {
+    try {
+        const parts = Intl.DateTimeFormat(undefined, { timeZoneName: 'short' }).formatToParts(new Date());
+        const tzPart = parts.find(p => p.type === 'timeZoneName');
+        return tzPart ? tzPart.value : 'Local';
+    } catch {
+        return 'Local';
+    }
+}
+
 function initTimeConversion() {
     const timeElements = document.querySelectorAll('[data-utc-time]');
+    const tzAbbr = getLocalTzAbbr();
     
     timeElements.forEach(el => {
         const utcDateStr = el.getAttribute('data-utc-time');
@@ -17,21 +33,19 @@ function initTimeConversion() {
         
         if (isNaN(utcDate.getTime())) return;
 
-        // Detection of local time
-        const options = { 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            hour12: true,
-            timeZoneName: 'short' 
-        };
+        // Local time in 24h format
+        const localOptions = { hour: '2-digit', minute: '2-digit', hour12: false };
+        const localTimeStr = utcDate.toLocaleTimeString(undefined, localOptions);
+
+        // UTC time in 24h format
+        const utcOptions = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' };
+        const utcTimeStr = utcDate.toLocaleTimeString('en-US', utcOptions);
+
+        // Render as "HH:MM TZ | HH:MM UTC"
+        el.textContent = `${localTimeStr} ${tzAbbr} | ${utcTimeStr} UTC`;
         
-        const localTimeStr = utcDate.toLocaleTimeString(undefined, options);
-        
-        // Render
-        el.textContent = localTimeStr;
-        
-        // Add a tooltip for the UTC original
-        el.title = `UTC: ${utcDate.toUTCString()}`;
+        // Full date tooltip
+        el.title = utcDate.toUTCString();
     });
 }
 

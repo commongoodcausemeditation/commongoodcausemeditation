@@ -4,10 +4,10 @@
         <header class="mb-12 text-center">
             <span class="text-6xl mb-6 block">{{ .Params.icon }}</span>
             <h1 class="text-5xl font-serif mb-4">{{ .Title }}</h1>
-            <div class="flex items-center justify-center gap-4 text-xs uppercase font-bold tracking-widest opacity-60">
+            <div class="flex items-center justify-center gap-4 text-sm uppercase font-bold tracking-widest opacity-60">
                 <span>{{ .Params.category }}</span>
                 <span>•</span>
-                <span data-utc-time="{{ .Params.utc_time }}">Universal Time</span>
+                <span data-utc-time="{{ .Params.utc_time }}">--:-- | --:-- UTC</span>
             </div>
         </header>
 

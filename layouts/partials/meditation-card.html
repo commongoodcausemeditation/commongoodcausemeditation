@@ -1,14 +1,14 @@
 <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">{{ .Params.icon }}</span>
-        <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">{{ .Params.category }}</span>
+        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">{{ .Params.category }}</span>
     </div>
     <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">{{ .Title }}</h3>
     <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">{{ .Params.description }}</p>
     <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
         <div class="flex flex-col text-left">
-            <span class="text-[8px] uppercase opacity-40 font-bold">Local Sync</span>
-            <span data-utc-time="{{ .Params.utc_time }}" class="text-xs font-bold text-[var(--color-accent)]">--:--</span>
+            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
+            <span data-utc-time="{{ .Params.utc_time }}" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
         </div>
         <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}')" class="btn btn-primary text-xs py-2 px-6">Join Space</button>
     </div>

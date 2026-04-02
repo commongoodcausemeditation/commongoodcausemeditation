@@ -181,8 +181,8 @@ footer {
     fill: none;
 }
 
-/* Tablet + Mobile (≤1024px): iPad Pro and below — use hamburger menu */
-@media (max-width: 1024px) {
+/* Tablet + Mobile (≤1200px): iPad Pro and below — use hamburger menu */
+@media (max-width: 1200px) {
     .hamburger-btn {
         display: flex;
     }

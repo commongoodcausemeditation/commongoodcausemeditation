@@ -39,11 +39,17 @@
   </url><url>
     <loc>http://localhost:1313/commongoodcausemeditation/impact/</loc>
   </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/</loc>
+  </url><url>
     <loc>http://localhost:1313/commongoodcausemeditation/archive/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/</loc>
   </url><url>
     <loc>http://localhost:1313/commongoodcausemeditation/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/commongoodcausemeditation/community/</loc>
+  </url><url>
+    <loc>http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/</loc>
   </url><url>
     <loc>http://localhost:1313/commongoodcausemeditation/upcoming/</loc>
   </url>

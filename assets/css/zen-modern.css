@@ -335,6 +335,20 @@ a {
         border-radius: 1.5rem;
     }
 
+    /* Hero card: ensure full-width children in column layout */
+    .glass-card.max-w-4xl {
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .glass-card.max-w-4xl > .flex-1 {
+        width: 100%;
+    }
+
+    .glass-card.max-w-4xl > .hero-icon {
+        align-self: center;
+    }
+
     .spacer-m { height: 3rem; }
     .spacer-xl { height: 6rem; }
 

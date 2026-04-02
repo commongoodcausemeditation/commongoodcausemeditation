@@ -78,6 +78,10 @@
     <a href="/commongoodcausemeditation/archive" onclick="document.getElementById('mobile-nav').classList.remove('active')">Archive</a>
     <a href="/commongoodcausemeditation/impact" onclick="document.getElementById('mobile-nav').classList.remove('active')">Impact</a>
     <a href="/commongoodcausemeditation/community" onclick="document.getElementById('mobile-nav').classList.remove('active')">Community</a>
+    
+    <button class="menu-theme-toggle" onclick="document.getElementById('theme-toggle').click()" title="Toggle Mode">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
 </div>
 
     <main id="main-content" class="min-h-screen">
@@ -87,17 +91,21 @@
 <section class="section-pad">
     <div class="container">
         
-        
+
         
         
         <div class="glass-card max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div class="flex-1 space-y-6">
-                <span class="inline-block px-4 py-1 rounded-full bg-[var(--color-highlight)] text-white text-[10px] uppercase font-bold tracking-widest">Featured Global Event</span>
+                <span
+                    style="display: inline-block; padding: 0.25rem 1rem; border-radius: 9999px; background: var(--color-highlight); color: #fff; font-size: 0.625rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.2em;">Featured
+                    Global Event</span>
                 <h2 class="hero-title font-serif tracking-tight leading-tight">Amazonian Green Breath</h2>
                 <p class="text-lg opacity-70">Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the &#39;Lungs of the Planet&#39;.</p>
-                <div class="flex items-center gap-8 pt-4">
+                <div class="flex justify-between gap-8 pt-4">
                     <div id="hero-countdown" data-target-time="2026-04-01T08:00:00Z"></div>
-                    <button onclick="startMeditation('amazon-regen-focus', 'Amazonian Green Breath', '🌿', 'Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the \u0027Lungs of the Planet\u0027.')" class="btn btn-primary">Enter Space</button>
+                    <button
+                        onclick="startMeditation('amazon-regen-focus', 'Amazonian Green Breath', '🌿', 'Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the \u0027Lungs of the Planet\u0027.')"
+                        class="btn btn-primary">Enter Space</button>
                 </div>
             </div>
             <div class="hero-icon">🌿</div>
@@ -119,16 +127,20 @@
             <div class="flex items-center gap-6">
                 <div class="scroll-indicator">
                     <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                 </div>
-                <a href="/commongoodcausemeditation/upcoming/#global" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+                <a href="#global"
+                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
             </div>
         </div>
         <div class="scroll-container">
             
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🌿</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Environment</span>
@@ -144,10 +156,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">💖</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Global Healing</span>
@@ -163,10 +175,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🕊️</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Global Peace</span>
@@ -182,10 +194,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🕊️</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Peace</span>
@@ -201,7 +213,7 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
         </div>
     </div>
@@ -215,21 +227,26 @@
         <div class="scroll-header">
             <div>
                 <h2 class="text-4xl font-serif">Regional Solidarity</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Localized rhythms and community circles</p>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Localized rhythms and community
+                    circles</p>
             </div>
             <div class="flex items-center gap-6">
                 <div class="scroll-indicator">
                     <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                 </div>
-                <a href="/commongoodcausemeditation/upcoming/#country" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+                <a href="#country"
+                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
             </div>
         </div>
         <div class="scroll-container">
             
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🌅</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Country Focus</span>
@@ -245,10 +262,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🌊</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Environment</span>
@@ -264,7 +281,7 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
         </div>
     </div>
@@ -278,21 +295,26 @@
         <div class="scroll-header">
             <div>
                 <h2 class="text-4xl font-serif">Personal Growth</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Sacred spaces for individual transformation</p>
+                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Sacred spaces for individual
+                    transformation</p>
             </div>
             <div class="flex items-center gap-6">
                 <div class="scroll-indicator">
                     <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                 </div>
-                <a href="/commongoodcausemeditation/upcoming/#personal" class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
+                <a href="#personal"
+                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
             </div>
         </div>
         <div class="scroll-container">
             
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🌕</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
@@ -308,10 +330,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🌻</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
@@ -327,10 +349,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🧭</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
@@ -346,10 +368,10 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
-                <div class="scroll-item">
-                    <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
+            <div class="scroll-item">
+                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
     <div class="flex justify-between mb-4">
         <span class="text-3xl group-hover:scale-110 transition-transform">🔥</span>
         <span class="text-[10px] uppercase opacity-40 font-bold tracking-widest">Personal</span>
@@ -365,7 +387,7 @@
     </div>
 </div>
 
-                </div>
+            </div>
             
         </div>
     </div>
@@ -379,8 +401,10 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-serif mb-16">Your Unified Presence</h2>
             <div class="glass-card flex flex-col items-center py-20 gap-4">
-                <div class="text-[10px] uppercase font-bold tracking-widest opacity-40">Total Synchronized Sessions</div>
-                <div id="user-total-sessions" class="text-9xl font-serif leading-none text-[var(--color-accent)]">0</div>
+                <div class="text-[10px] uppercase font-bold tracking-widest opacity-40">Total Synchronized Sessions
+                </div>
+                <div id="user-total-sessions" class="text-9xl font-serif leading-none text-[var(--color-accent)]">0
+                </div>
                 <p class="text-lg opacity-60 italic mt-8">Every breath resonates in the field.</p>
             </div>
         </div>

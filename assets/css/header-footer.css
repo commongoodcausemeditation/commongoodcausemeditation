@@ -151,7 +151,38 @@ footer {
 }
 
 /* --- MOBILE RESPONSIVE HEADER/FOOTER --- */
-@media (max-width: 768px) {
+
+/* Theme toggle in mobile menu — base styles (hidden by default) */
+.mobile-nav-overlay .menu-theme-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-border);
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-text);
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.mobile-nav-overlay .menu-theme-toggle:hover {
+    transform: scale(1.1);
+    background: var(--color-surface);
+}
+
+.mobile-nav-overlay .menu-theme-toggle svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+}
+
+/* Tablet + Mobile (≤1024px): iPad Pro and below — use hamburger menu */
+@media (max-width: 1024px) {
     .hamburger-btn {
         display: flex;
     }
@@ -172,9 +203,6 @@ footer {
     .fixed-nav h1 {
         font-size: 1rem !important;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 180px;
     }
 
     .nav-brand span {
@@ -189,5 +217,24 @@ footer {
     .footer-nav {
         flex-wrap: wrap;
         gap: 1.5rem;
+    }
+}
+
+/* Small phones (≤390px): iPhone SE and similar — move theme toggle to menu */
+@media (max-width: 390px) {
+    /* Hide theme toggle from header bar */
+    .fixed-nav #theme-toggle {
+        display: none !important;
+    }
+
+    /* Show theme toggle inside mobile menu */
+    .mobile-nav-overlay .menu-theme-toggle {
+        display: flex !important;
+    }
+
+    .nav-brand h1,
+    .fixed-nav h1 {
+        font-size: 0.875rem !important;
+        white-space: nowrap;
     }
 }

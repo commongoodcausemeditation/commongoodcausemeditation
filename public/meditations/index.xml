@@ -71,5 +71,26 @@
       <guid>http://localhost:1313/commongoodcausemeditation/meditations/summer-solstice-unity/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Inner Fire</title>
+      <link>http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/commongoodcausemeditation/meditations/inner-fire/</guid>
+      <description>&lt;h1 id=&#34;inner-fire&#34;&gt;Inner Fire&lt;/h1&gt;&#xA;&lt;p&gt;Transform personal energy into action.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ocean Restoration</title>
+      <link>http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/commongoodcausemeditation/meditations/ocean-restoration/</guid>
+      <description>&lt;h1 id=&#34;ocean-restoration&#34;&gt;Ocean Restoration&lt;/h1&gt;&#xA;&lt;p&gt;Group intent for healing our oceans.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Universal Harmony</title>
+      <link>http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/commongoodcausemeditation/meditations/universal-harmony/</guid>
+      <description>&lt;h1 id=&#34;universal-harmony&#34;&gt;Universal Harmony&lt;/h1&gt;&#xA;&lt;p&gt;Join the global synchronization for peace.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

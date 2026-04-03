@@ -61,9 +61,9 @@
         </nav>
 
         
-        <div class="flex items-center gap-8">
-            <div id="dual-clock" style="font-size: 1rem; font-weight: 800; letter-spacing: -0.01em; border-right: 1.5px solid var(--color-border); padding-right: 2rem; white-space: nowrap;">
-                <span id="clocks-combined">00:00 IST | 00:00 UTC</span>
+        <div class="flex items-center gap-4">
+            <div id="dual-clock" style="font-size: 0.9rem; font-weight: 800; letter-spacing: -0.01em; border-right: 1.5px solid var(--color-border); padding-right: 1.25rem; white-space: nowrap; font-variant-numeric: tabular-nums;">
+                <span id="clocks-combined">00:00:00 IST | 00:00:00 UTC</span>
             </div>
             <button id="theme-toggle" title="Toggle Mode" style="margin: 0;">
                 <svg id="theme-icon" fill="none" viewBox="0 0 24 24"></svg>
@@ -95,50 +95,51 @@
 <article class="pt-40 pb-20 px-6">
     <div class="container mx-auto max-w-3xl">
         <header class="mb-12 text-center">
+            
             <span class="text-6xl mb-6 block">🌕</span>
+            
             <h1 class="text-5xl font-serif mb-4">Full Moon Illumination</h1>
-            <div class="flex items-center justify-center gap-4 text-sm uppercase font-bold tracking-widest opacity-60">
-                <span>Personal Growth</span>
-                <span>•</span>
-                <span data-utc-time="2026-04-02T18:00:00Z">--:-- | --:-- UTC</span>
-            </div>
+            
+            <p class="text-xl opacity-60 leading-relaxed font-body max-w-2xl mx-auto">Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.</p>
+            
         </header>
 
-        <div class="glass-card mb-12">
-            <h2 class="text-xl font-serif mb-6 border-b border-[var(--color-border)] pb-2 uppercase tracking-widest text-xs opacity-60">Key Impact Points</h2>
-            <ul class="space-y-4">
-                
-                <li class="flex items-start gap-4">
-                    <span class="text-[var(--color-highlight)] text-xl">✦</span>
-                    <p class="opacity-80 leading-relaxed">Alignment with the peak of the lunar cycle.</p>
-                </li>
-                
-                <li class="flex items-start gap-4">
-                    <span class="text-[var(--color-highlight)] text-xl">✦</span>
-                    <p class="opacity-80 leading-relaxed">Focus on releasing outdated patterns.</p>
-                </li>
-                
-                <li class="flex items-start gap-4">
-                    <span class="text-[var(--color-highlight)] text-xl">✦</span>
-                    <p class="opacity-80 leading-relaxed">Amplifying personal growth intentions.</p>
-                </li>
-                
-            </ul>
-        </div>
-
-        <div class="prose prose-lg prose-stone prose-invert mx-auto opacity-80 leading-relaxed font-body">
+        <div class="prose-content opacity-80 leading-relaxed font-body">
             <h2 id="shining-light-on-the-self">Shining Light on the Self</h2>
 <p>Personal growth requires moments of absolute honesty. Use this lunar window to illuminate your path forward.</p>
 
         </div>
 
         <div class="mt-16 text-center">
-            <button onclick="startMeditation('full-moon-personal-growth', 'Full Moon Illumination', '🌕', 'Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.', '2026-04-02T18:00:00Z')" class="btn btn-primary px-12 py-4">
-                Initiate Focus Session
-            </button>
+            <a href="/" class="btn btn-primary" style="opacity: 0.6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">Back to Sanctuary</a>
         </div>
     </div>
 </article>
+
+<style>
+.prose-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+.prose-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+.prose-content p {
+    margin-bottom: 1.5rem;
+}
+.prose-content ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+.prose-content li {
+    margin-bottom: 0.75rem;
+    list-style: disc;
+}
+</style>
 
     </main>
     <footer>
@@ -157,9 +158,9 @@
 
         
         <nav class="footer-nav">
-            <a href="#">Privacy</a>
-            <a href="#">Community Map</a>
-            <a href="#">About</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/community-map/">Community Map</a>
+            <a href="/about/">About</a>
         </nav>
 
         

@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="pt-40 pb-20 px-6">
+    <div class="container mx-auto max-w-3xl">
+        <header class="mb-12 text-center">
+            {{ if .Params.icon }}
+            <span class="text-6xl mb-6 block">{{ .Params.icon }}</span>
+            {{ else }}
+            <div style="background: var(--color-accent); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.75rem; margin: 0 auto 2rem;">🕊️</div>
+            {{ end }}
+            <h1 class="text-5xl font-serif mb-4">{{ .Title }}</h1>
+            {{ if .Description }}
+            <p class="text-xl opacity-60 leading-relaxed font-body max-w-2xl mx-auto">{{ .Description }}</p>
+            {{ end }}
+        </header>
+
+        <div class="prose-content opacity-80 leading-relaxed font-body">
+            {{ .Content }}
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="{{ "/" | relURL }}" class="btn btn-primary" style="opacity: 0.6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">Back to Sanctuary</a>
+        </div>
+    </div>
+</article>
+
+<style>
+.prose-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+.prose-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+.prose-content p {
+    margin-bottom: 1.5rem;
+}
+.prose-content ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+.prose-content li {
+    margin-bottom: 0.75rem;
+    list-style: disc;
+}
+</style>
+{{ end }}

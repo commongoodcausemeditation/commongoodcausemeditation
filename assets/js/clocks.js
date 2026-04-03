@@ -15,7 +15,7 @@ function updateClocks() {
     const now = new Date();
     
     // 24hr format options
-    const options = { hour: '2-digit', minute: '2-digit', hour12: false };
+    const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
     
     const localStr = now.toLocaleTimeString(undefined, options);
     const utcStr = now.toLocaleTimeString('en-US', { ...options, timeZone: 'UTC' });

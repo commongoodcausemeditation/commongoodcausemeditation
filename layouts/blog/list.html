@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="pt-40 pb-20 px-6 min-h-screen">
+    <div class="container mx-auto max-w-4xl">
+        <header class="mb-16 text-center border-b border-[var(--color-border)] pb-12">
+            <h1 class="text-6xl font-serif mb-6">{{ .Title }}</h1>
+            <p class="text-xl opacity-70 max-w-2xl mx-auto">{{ .Params.description }}</p>
+        </header>
+
+        <div class="grid gap-12">
+            {{ range .Pages }}
+            <div class="glass-card flex flex-col md:flex-row gap-8 p-0 overflow-hidden hover:shadow-lg transition-all group">
+                <div class="p-10 flex-1 flex flex-col justify-center">
+                    <div class="flex items-center gap-4 mb-4 text-[10px] uppercase font-bold tracking-widest opacity-60">
+                        {{ range .Params.categories }}
+                        <span class="px-2 py-1 bg-[var(--color-accent)] text-white rounded-sm">{{ . }}</span>
+                        {{ end }}
+                        <span>{{ .Date.Format "January 2, 2006" }}</span>
+                    </div>
+                    
+                    <h2 class="text-3xl font-serif mb-4 group-hover:text-[var(--color-accent)] transition-colors">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                    
+                    <p class="opacity-70 leading-relaxed mb-6">{{ .Params.description }}</p>
+                    
+                    <div class="mt-auto pt-4 border-t border-[var(--color-border)] flex items-center justify-between">
+                        <span class="text-xs font-bold">{{ .Params.author | default "CommonGoodCause" }}</span>
+                        <a href="{{ .RelPermalink }}" class="text-xs uppercase tracking-widest font-bold opacity-60 hover:opacity-100 flex items-center gap-1">Read Article <span style="font-size: 1.2rem; line-height: 1;">→</span></a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

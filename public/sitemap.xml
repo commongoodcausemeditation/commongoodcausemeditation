@@ -5,13 +5,37 @@
     <loc>http://localhost:1314/commongoodcausemeditation/about/</loc>
     <lastmod>2026-04-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/categories/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/</loc>
     <lastmod>2026-04-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/community-map/</loc>
     <lastmod>2026-04-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/tags/deep-dive/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/tags/field-theory/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/blog/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/categories/philosophy/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/privacy/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/categories/science/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/tags/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/commongoodcausemeditation/blog/the-power-of-synchronicity/</loc>
     <lastmod>2026-04-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/meditations/amazon-regen/</loc>
@@ -44,7 +68,7 @@
     <loc>http://localhost:1314/commongoodcausemeditation/meditations/summer-solstice-unity/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/commongoodcausemeditation/categories/</loc>
+    <loc>http://localhost:1314/commongoodcausemeditation/community/links/</loc>
   </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/impact/</loc>
   </url><url>
@@ -53,8 +77,6 @@
     <loc>http://localhost:1314/commongoodcausemeditation/archive/</loc>
   </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/meditations/ocean-restoration/</loc>
-  </url><url>
-    <loc>http://localhost:1314/commongoodcausemeditation/tags/</loc>
   </url><url>
     <loc>http://localhost:1314/commongoodcausemeditation/community/</loc>
   </url><url>

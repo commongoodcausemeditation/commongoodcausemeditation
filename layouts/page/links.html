@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="pt-40 pb-20 px-6 min-h-screen">
+    <div class="container mx-auto max-w-5xl">
+        <header class="mb-16 text-center">
+            <span class="text-6xl mb-6 block">🔗</span>
+            <h1 class="text-5xl font-serif mb-4">{{ .Title }}</h1>
+            <p class="text-lg opacity-70 max-w-2xl mx-auto">{{ .Params.description }}</p>
+        </header>
+
+        <div class="space-y-16">
+            {{ range .Site.Data.links.categories }}
+            <section>
+                <div class="flex items-center gap-4 mb-8 pb-4 border-b border-[var(--color-border)]">
+                    <span class="text-3xl">{{ .icon }}</span>
+                    <h2 class="text-3xl font-serif">{{ .name }}</h2>
+                </div>
+                
+                <div class="grid md-grid-2 gap-6">
+                    {{ range .links }}
+                    <div class="glass-card flex flex-col p-8 hover:-translate-y-1 hover:shadow-lg transition-all" style="padding: 2.5rem; min-height: 220px;">
+                        <h3 class="text-xl font-serif mb-3 font-bold">
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-2" style="color: var(--color-accent);">
+                                {{ .title }}
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </h3>
+                        <p class="opacity-70 text-sm leading-relaxed mb-6 flex-1">{{ .description }}</p>
+                        
+                        {{ if .know_more }}
+                        <div class="mt-auto pt-5 border-t border-[var(--color-border)]">
+                            <a href="{{ .know_more }}" class="text-[10px] uppercase tracking-widest font-bold opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2" style="color: var(--color-text);">
+                                Know More <span style="color: var(--color-accent);">→</span>
+                            </a>
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

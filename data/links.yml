@@ -1,0 +1,35 @@
+categories:
+  - name: "Global Meditations"
+    icon: "🌍"
+    links:
+      - title: "World Teacher Trust"
+        url: "https://worldteachertrust.org"
+        description: "A global group operating in various countries dedicated to spiritual synthesis and global harmony."
+        know_more: "https://worldteachertrust.org/en/web/community"
+
+      - title: "Good Will Meditation"
+        url: "https://lucistrust.org"
+        description: "Promoting right human relations through the collective power of goodwill and intention."
+
+  - name: "Regional Groups"
+    icon: "📍"
+    links:
+      - title: "WTT India"
+        url: "https://wttindia.org"
+        description: "Meditation and service activities focused specifically in the Indian subcontinent."
+        
+      - title: "European Synthesis"
+        url: "#"
+        description: "Connect with localized groups syncing across European timezones for regular meetings."
+        know_more: "#/europe"
+
+  - name: "Digital Channels"
+    icon: "📱"
+    links:
+      - title: "CommonGood Telegram"
+        url: "https://telegram.org"
+        description: "Real-time updates and synchronization calls for upcoming global events and last-minute integrations."
+        
+      - title: "Facebook Community"
+        url: "https://facebook.com"
+        description: "A space for sharing personal experiences, reflections, and fostering community support."

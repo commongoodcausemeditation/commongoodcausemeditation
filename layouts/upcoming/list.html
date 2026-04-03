@@ -1,57 +1,77 @@
 {{ define "main" }}
-<section class="section-pad">
-    <div class="container">
-        <header class="max-w-3xl mx-auto text-center mb-24">
-            <h1 class="text-6xl font-serif mb-6">{{ .Title }}</h1>
-            <p class="text-lg opacity-60 italic">{{ .Description }}</p>
+<article class="pt-40 pb-20 px-6 min-h-screen">
+    <div class="container mx-auto max-w-6xl">
+        <header class="mb-16 text-center">
+            <span class="text-6xl mb-6 block">✨</span>
+            <h1 class="text-5xl font-serif mb-4">{{ .Title }}</h1>
+            <p class="text-lg opacity-70 max-w-2xl mx-auto">{{ .Params.description | default "Unifying humanity through presence." }}</p>
         </header>
 
-        {{ $meditation_pages := where site.RegularPages "Section" "meditations" }}
-
-        <!-- Global Events -->
-        <div id="global" class="mb-24">
-            <div class="flex items-center gap-4 mb-12">
-                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Global Synchronizations</span>
-                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+        <!-- Global Scope Feed -->
+        <div id="global" class="mb-24 pt-8" style="scroll-margin-top: 150px;">
+            <div class="mb-10 text-center">
+                <span class="text-xs uppercase font-bold tracking-widest opacity-50 mb-2 block">Participant Scope</span>
+                <h2 class="text-4xl font-serif">Global Synchronous Field</h2>
+                <p class="opacity-60 mt-4 max-w-2xl mx-auto">Open invitations spanning the entire planet, focusing collective willpower and presence onto universal causes.</p>
             </div>
-            <div class="grid md-grid-2 lg-grid-3">
-                {{ range $meditation_pages }}
-                    {{ if or (eq .Params.group "global") (eq .Params.type "cause") }}
-                        {{ partial "meditation-card.html" . }}
-                    {{ end }}
+            <div class="grid md-grid-2 lg-grid-3 gap-8">
+                <!-- Data Model Query -->
+                {{ $globals := where (where site.RegularPages "Section" "meditations") ".Params.participant_scope" "==" "global" }}
+                {{ range $globals }}
+                    {{ partial "meditation-card.html" . }}
                 {{ end }}
             </div>
         </div>
 
-        <!-- Country Wise -->
-        <div id="country" class="mb-24">
-            <div class="flex items-center gap-4 mb-12">
-                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Regional Solidarity</span>
-                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+        <!-- Regional Scope Feed with Hidden Filter Architecture -->
+        <div id="regional" class="mb-24 pt-16 border-t border-[var(--color-border)] relative" style="scroll-margin-top: 150px;">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6 text-center md:text-left">
+                <div>
+                    <span class="text-xs uppercase font-bold tracking-widest opacity-50 mb-2 block text-center md:text-left">Participant Scope</span>
+                    <h2 class="text-4xl font-serif">Regional Solidarity</h2>
+                    <p class="opacity-60 mt-2 max-w-2xl">Localized focal points. By default, view the united global flow beneath. Use filters if hunting specific geographic coordinates.</p>
+                </div>
+                
+                <!-- Advanced Filter (De-emphasized) -->
+                <div>
+                    <button class="bg-[var(--color-surface)] border border-[var(--color-border)] px-4 py-2.5 text-[10px] uppercase tracking-widest font-bold opacity-60 hover:opacity-100 flex items-center gap-2 rounded-full cursor-pointer transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]" title="Filter by Focus Region">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                        <span>Advanced Coordinates</span>
+                    </button>
+                </div>
             </div>
-            <div class="grid md-grid-2 lg-grid-3">
-                {{ range $meditation_pages }}
-                    {{ if eq .Params.group "country" }}
+            
+            <div class="grid md-grid-2 lg-grid-3 gap-8">
+                <!-- Data Model Query -->
+                {{ $regionals := where (where site.RegularPages "Section" "meditations") ".Params.participant_scope" "==" "regional" }}
+                {{ range $regionals }}
+                    <!-- We output the card, and dynamically append the Focus Region to the UI -->
+                    <div class="relative group h-full">
+                        <div class="absolute -top-3 right-4 bg-[var(--color-bg)] border border-[var(--color-accent)] text-[var(--color-accent)] text-[8px] uppercase tracking-widest px-3 py-1 rounded-full z-10 font-bold opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:-translate-y-0 text-center">
+                            Target: {{ .Params.focus_region }}
+                        </div>
                         {{ partial "meditation-card.html" . }}
-                    {{ end }}
+                    </div>
                 {{ end }}
             </div>
         </div>
 
-        <!-- Personal Growth -->
-        <div id="personal" class="mb-24">
-            <div class="flex items-center gap-4 mb-12">
-                <span class="text-xs uppercase font-bold tracking-[0.3em] opacity-30 whitespace-nowrap">Personal Growth Journeys</span>
-                <div class="h-[1px] w-full bg-[var(--color-border)]"></div>
+        <!-- Personal Scope Feed -->
+        <div id="personal" class="mb-24 pt-16 border-t border-[var(--color-border)] text-center" style="scroll-margin-top: 150px;">
+            <div class="mb-10">
+                <span class="text-xs uppercase font-bold tracking-widest opacity-50 mb-2 block">Participant Scope</span>
+                <h2 class="text-4xl font-serif">Personal Expansion</h2>
+                <p class="opacity-60 mt-4 max-w-2xl mx-auto">Intimate pathways configured for individual healing, intense self-reflection, and inner stabilization.</p>
             </div>
-            <div class="grid md-grid-2 lg-grid-3">
-                {{ range $meditation_pages }}
-                    {{ if eq .Params.group "personal" }}
-                        {{ partial "meditation-card.html" . }}
-                    {{ end }}
+            <div class="grid md-grid-2 lg-grid-3 gap-8 text-left">
+                <!-- Data Model Query -->
+                {{ $personals := where (where site.RegularPages "Section" "meditations") ".Params.participant_scope" "==" "personal" }}
+                {{ range $personals }}
+                    {{ partial "meditation-card.html" . }}
                 {{ end }}
             </div>
         </div>
+
     </div>
-</section>
+</article>
 {{ end }}

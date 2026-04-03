@@ -3,7 +3,7 @@
 <style>
     /* Isolated Hero Alignment Logic */
     #hero-section {
-        padding: 2rem 0 4rem;
+        padding: 0 0 4rem;
     }
     #hero-layout {
         display: grid;
@@ -189,101 +189,38 @@
     </div>
 </section></div>
 
-<!-- Global Synchronizations Section -->
+<!-- Pathways Navigation Section -->
 <section class="section-pad">
     <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Global Synchronizations</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Unifying humanity through presence</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#global"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif">Choose Your Focus</h2>
+            <p class="text-lg opacity-70 mt-4 max-w-2xl mx-auto">Explore distinct pathways to sync your intentions with the world, your region, or your inner self.</p>
         </div>
-        <div class="scroll-container">
-            {{ $global_events := where $meditation_pages ".Params.group" "global" }}
-            {{ range first 10 $global_events }}
-            <div class="scroll-item">
-                {{ partial "meditation-card.html" . }}
-            </div>
-            {{ end }}
-        </div>
-    </div>
-</section>
-
-<div class="spacer-m"></div>
-
-<!-- Regional Solidarity Section -->
-<section class="section-pad bg-[rgba(178,172,136,0.05)]">
-    <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Regional Solidarity</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Localized rhythms and community
-                    circles</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#country"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
-        </div>
-        <div class="scroll-container">
-            {{ $regional_events := where $meditation_pages ".Params.group" "country" }}
-            {{ range first 10 $regional_events }}
-            <div class="scroll-item">
-                {{ partial "meditation-card.html" . }}
-            </div>
-            {{ end }}
-        </div>
-    </div>
-</section>
-
-<div class="spacer-m"></div>
-
-<!-- Personal Growth Section -->
-<section class="section-pad">
-    <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Personal Growth</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Sacred spaces for individual
-                    transformation</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#personal"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
-        </div>
-        <div class="scroll-container">
-            {{ $personal_events := where $meditation_pages ".Params.group" "personal" }}
-            {{ range first 10 $personal_events }}
-            <div class="scroll-item">
-                {{ partial "meditation-card.html" . }}
-            </div>
-            {{ end }}
+        
+        <div class="grid md-grid-2 lg-grid-3 gap-8">
+            <!-- Global Pathway -->
+            <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#global" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">🌍</span>
+                <h3 class="text-2xl font-serif mb-3">Global Synchronicity</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Join thousands worldwide in massive unified meditations dedicated to planetary healing and peace.</p>
+            </a>
+            
+            <!-- Regional Pathway -->
+            <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#regional" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">📍</span>
+                <h3 class="text-2xl font-serif mb-3">Regional Solidarity</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Focus your energy locally. Participate in localized rhythms and community-driven causes in your region.</p>
+            </a>
+            
+            <!-- Personal Pathway -->
+            <a href="{{ ((site.GetPage " /upcoming").RelPermalink) }}#personal" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">🧘</span>
+                <h3 class="text-2xl font-serif mb-3">Personal Growth</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Sacred, intimate spaces designed for deep self-reflection, individual transformation, and stillness.</p>
+            </a>
         </div>
     </div>
 </section>

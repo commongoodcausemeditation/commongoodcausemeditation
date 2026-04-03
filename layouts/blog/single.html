@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="pt-40 pb-20 px-6 min-h-screen">
+    <div class="container mx-auto max-w-3xl">
+        <header class="mb-16 text-center">
+            <div class="flex items-center justify-center gap-4 mb-8 text-[10px] uppercase font-bold tracking-widest opacity-60">
+                {{ range .Params.categories }}
+                <span class="px-2 py-1 bg-[var(--color-accent)] text-white rounded-sm">{{ . }}</span>
+                {{ end }}
+                <span>•</span>
+                <span>{{ .Date.Format "January 2, 2006" }}</span>
+                <span>•</span>
+                <span>{{ .Params.author | default "CommonGoodCause" }}</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-serif mb-6 leading-tight">{{ .Title }}</h1>
+            <p class="text-xl opacity-70 italic">{{ .Params.description }}</p>
+        </header>
+
+        <div class="prose prose-lg prose-stone prose-invert mx-auto opacity-80 leading-relaxed font-body">
+            {{ .Content }}
+        </div>
+
+        <footer class="mt-20 pt-8 border-t border-[var(--color-border)] flex justify-between items-center text-sm font-bold uppercase tracking-widest opacity-60">
+            <a href="{{ "/blog/" | relURL }}" class="hover:text-[var(--color-accent)] transition-colors">← Back to Journal</a>
+            <div class="flex gap-4">
+                {{ range .Params.tags }}
+                <span class="">#{{ . }}</span>
+                {{ end }}
+            </div>
+        </footer>
+    </div>
+</article>
+{{ end }}

@@ -63,7 +63,7 @@
             <a href="/commongoodcausemeditation/upcoming" style="font-weight: 800; opacity: 1; color: var(--color-text);">Upcoming</a>
             <a href="/commongoodcausemeditation/archive" style="font-weight: 800; opacity: 1; color: var(--color-text);">Archive</a>
             <a href="/commongoodcausemeditation/impact" style="font-weight: 800; opacity: 1; color: var(--color-text);">Impact</a>
-            <a href="/commongoodcausemeditation/community" style="font-weight: 800; opacity: 1; color: var(--color-text);">Community</a>
+            <a href="/commongoodcausemeditation/community/links" style="font-weight: 800; opacity: 1; color: var(--color-text);">Community</a>
         </nav>
 
         
@@ -89,7 +89,7 @@
     <a href="/commongoodcausemeditation/upcoming" onclick="document.getElementById('mobile-nav').classList.remove('active')">Upcoming</a>
     <a href="/commongoodcausemeditation/archive" onclick="document.getElementById('mobile-nav').classList.remove('active')">Archive</a>
     <a href="/commongoodcausemeditation/impact" onclick="document.getElementById('mobile-nav').classList.remove('active')">Impact</a>
-    <a href="/commongoodcausemeditation/community" onclick="document.getElementById('mobile-nav').classList.remove('active')">Community</a>
+    <a href="/commongoodcausemeditation/community/links" onclick="document.getElementById('mobile-nav').classList.remove('active')">Community</a>
     
     <button class="menu-theme-toggle" onclick="document.getElementById('theme-toggle').click()" title="Toggle Mode">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -102,7 +102,7 @@
 <style>
      
     #hero-section {
-        padding: 2rem 0 4rem;
+        padding: 0 0 4rem;
     }
     #hero-layout {
         display: grid;
@@ -308,328 +308,35 @@
 
 <section class="section-pad">
     <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Global Synchronizations</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Unifying humanity through presence</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="#global"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif">Choose Your Focus</h2>
+            <p class="text-lg opacity-70 mt-4 max-w-2xl mx-auto">Explore distinct pathways to sync your intentions with the world, your region, or your inner self.</p>
         </div>
-        <div class="scroll-container">
+        
+        <div class="grid md-grid-2 lg-grid-3 gap-8">
+            
+            <a href="#global" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">🌍</span>
+                <h3 class="text-2xl font-serif mb-3">Global Synchronicity</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Join thousands worldwide in massive unified meditations dedicated to planetary healing and peace.</p>
+            </a>
             
             
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🌿</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Amazonian Green Breath</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the &#39;Lungs of the Planet&#39;.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-01T08:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('amazon-regen-focus', 'Amazonian Green Breath', '🌿', 'Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the \u0027Lungs of the Planet\u0027.', '2026-04-01T08:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Amazonian Green Breath', 'Continuous focus on the rejuvenation of the Amazon rainforest. Send healing resonance to the \u0027Lungs of the Planet\u0027.', '2026-04-01T08:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">💖</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Healing</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Planetary Healing Pulse</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-10T15:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('planetary-healing-pulse-apr-2026', 'Planetary Healing Pulse', '💖', 'A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.', '2026-04-10T15:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Planetary Healing Pulse', 'A synchronized wave of heart-centered resonance focusing on planetary stability and restoration. Join the collective intention stream.', '2026-04-10T15:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🕊️</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Global Peace</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">World Peace Day Synchronization</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-12T12:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('world-peace-sync-2026', 'World Peace Day Synchronization', '🕊️', 'Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.', '2026-04-12T12:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('World Peace Day Synchronization', 'Join millions around the globe in a unified field of peace. A 30-minute silent meditation to harmonize planetary collective intention.', '2026-04-12T12:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">☀️</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Special Event</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Summer Solstice Global Unity</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Join millions as we welcome the peak of the Sun&#39;s light to radiate peace across all continents.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-06-21T09:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('summer-solstice-unity', 'Summer Solstice Global Unity', '☀️', 'Join millions as we welcome the peak of the Sun\u0027s light to radiate peace across all continents.', '2026-06-21T09:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Summer Solstice Global Unity', 'Join millions as we welcome the peak of the Sun\u0027s light to radiate peace across all continents.', '2026-06-21T09:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🕊️</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Peace</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Universal Harmony</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Synchronize with thousands for global peace.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-15T12:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('g-harmony', 'Universal Harmony', '🕊️', 'Synchronize with thousands for global peace.', '2026-04-15T12:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Universal Harmony', 'Synchronize with thousands for global peace.', '2026-04-15T12:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<div class="spacer-m"></div>
-
-
-<section class="section-pad bg-[rgba(178,172,136,0.05)]">
-    <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Regional Solidarity</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Localized rhythms and community
-                    circles</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="#country"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
-        </div>
-        <div class="scroll-container">
+            <a href="#regional" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">📍</span>
+                <h3 class="text-2xl font-serif mb-3">Regional Solidarity</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Focus your energy locally. Participate in localized rhythms and community-driven causes in your region.</p>
+            </a>
             
             
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🌅</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Country Focus</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Indian Sunrise Solidarity</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-05T00:30:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('india-sunrise-unity', 'Indian Sunrise Solidarity', '🌅', 'A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.', '2026-04-05T00:30:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Indian Sunrise Solidarity', 'A synchronized dawn meditation across the Indian subcontinent. Awakening the inner light to foster regional harmony and growth.', '2026-04-05T00:30:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🌊</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Environment</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Ocean Restoration</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Healing our shared waters through group intent.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-16T18:30:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('r-ocean', 'Ocean Restoration', '🌊', 'Healing our shared waters through group intent.', '2026-04-16T18:30:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Ocean Restoration', 'Healing our shared waters through group intent.', '2026-04-16T18:30:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<div class="spacer-m"></div>
-
-
-<section class="section-pad">
-    <div class="container">
-        <div class="scroll-header">
-            <div>
-                <h2 class="text-4xl font-serif">Personal Growth</h2>
-                <p class="text-xs opacity-60 uppercase tracking-widest font-bold">Sacred spaces for individual
-                    transformation</p>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="scroll-indicator">
-                    <span>Swipe</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </div>
-                <a href="#personal"
-                    class="text-sm border-b border-[var(--color-accent)] pb-1 hover:opacity-50">View all</a>
-            </div>
-        </div>
-        <div class="scroll-container">
-            
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🌕</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Full Moon Illumination</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-02T18:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('full-moon-personal-growth', 'Full Moon Illumination', '🌕', 'Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.', '2026-04-02T18:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Full Moon Illumination', 'Harness the peak lunar energy for deep self-reflection and release. A special session focused on personal transformation and clarity.', '2026-04-02T18:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🌻</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Gratitude Saturday: Weekly Appreciation</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-04T16:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('gratitude-saturday-growth', 'Gratitude Saturday: Weekly Appreciation', '🌻', 'A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.', '2026-04-04T16:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Gratitude Saturday: Weekly Appreciation', 'A moment of deep gratitude for the week that was. Shifting the focus from what we lack to what we have, fostering an abundance mindset.', '2026-04-04T16:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🧭</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal Growth</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Mindful Monday: Weekly Reset</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-06T04:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('mindful-monday-growth', 'Mindful Monday: Weekly Reset', '🧭', 'Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.', '2026-04-06T04:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Mindful Monday: Weekly Reset', 'Start your week with clarity and purpose. A shared moment of stillness to set intentions for the following seven days.', '2026-04-06T04:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
-            <div class="scroll-item">
-                <div class="glass-card flex flex-col h-full hover:border-[var(--color-accent)] transition-all group">
-    <div class="flex justify-between mb-4">
-        <span class="text-3xl group-hover:scale-110 transition-transform">🔥</span>
-        <span class="text-xs uppercase opacity-40 font-bold tracking-widest">Personal</span>
-    </div>
-    <h3 class="text-xl font-serif mb-2" style="font-size: 1.35rem;">Inner Fire</h3>
-    <p class="text-sm opacity-60 flex-1 mb-4 leading-relaxed">Ignite your creative energy and focus.</p>
-    <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between" style="margin-top: auto;">
-        <div class="flex flex-col text-left">
-            <span class="text-xs uppercase opacity-40 font-bold">Time</span>
-            <span data-utc-time="2026-04-17T05:00:00Z" class="text-sm font-bold text-[var(--color-accent)]">--:-- | --:-- UTC</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <button onclick="startMeditation('p-inner-fire', 'Inner Fire', '🔥', 'Ignite your creative energy and focus.', '2026-04-17T05:00:00Z')" class="btn-primary transition-transform hover:scale-105" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 700; border-radius: 99px; cursor: pointer; border: none; font-family: inherit; height: 38px; display: flex; align-items: center; justify-content: center;">Join Space</button>
-            <button onclick="window.addToCalendar('Inner Fire', 'Ignite your creative energy and focus.', '2026-04-17T05:00:00Z')" class="hover:scale-110 transition-transform opacity-70 hover:opacity-100" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-surface); border: 1.5px solid var(--color-border); font-size: 0.95rem; cursor: pointer;" title="Add to Calendar" aria-label="Add to Calendar">📅</button>
-        </div>
-    </div>
-</div>
-
-            </div>
-            
+            <a href="#personal" class="glass-card flex flex-col items-center justify-center text-center p-12 hover:-translate-y-2 hover:border-[var(--color-accent)] transition-all group shadow-sm hover:shadow-xl relative overflow-hidden" style="min-height: auto; margin-bottom: 0;">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity" style="background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);"></div>
+                <span class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">🧘</span>
+                <h3 class="text-2xl font-serif mb-3">Personal Growth</h3>
+                <p class="opacity-60 text-sm leading-relaxed">Sacred, intimate spaces designed for deep self-reflection, individual transformation, and stillness.</p>
+            </a>
         </div>
     </div>
 </section>

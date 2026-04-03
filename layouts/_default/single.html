@@ -4,11 +4,14 @@
         <header class="mb-12 text-center">
             <span class="text-6xl mb-6 block">{{ .Params.icon }}</span>
             <h1 class="text-5xl font-serif mb-4">{{ .Title }}</h1>
-            <div class="flex items-center justify-center gap-4 text-sm uppercase font-bold tracking-widest opacity-60">
+            <div class="flex items-center justify-center gap-4 text-sm uppercase font-bold tracking-widest opacity-60 mb-6">
                 <span>{{ .Params.category }}</span>
                 <span>•</span>
                 <span data-utc-time="{{ .Params.utc_time }}">--:-- | --:-- UTC</span>
             </div>
+            <button onclick="window.addToCalendar('{{ .Title }}', '{{ .Params.description }}', '{{ .Params.utc_time }}')" class="hover:scale-110 transition-transform opacity-60 hover:opacity-100 bg-[var(--color-surface)] px-4 py-2 rounded-full border border-[var(--color-border)] text-[10px] font-bold uppercase tracking-widest inline-flex items-center gap-2 cursor-pointer">
+                <span class="text-sm">📅</span> Sync to Calendar
+            </button>
         </header>
 
         <div class="glass-card mb-12">
@@ -27,9 +30,13 @@
             {{ .Content }}
         </div>
 
-        <div class="mt-16 text-center">
-            <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}', '{{ .Params.utc_time }}')" class="btn btn-primary px-12 py-4">
+        <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
+            <button onclick="startMeditation('{{ .Params.id }}', '{{ .Title }}', '{{ .Params.icon }}', '{{ .Params.description }}', '{{ .Params.utc_time }}')" class="btn btn-primary px-12 py-4 shadow-xl">
                 Initiate Focus Session
+            </button>
+            <button onclick="window.addToCalendar('{{ .Title }}', '{{ .Params.description }}', '{{ .Params.utc_time }}')" class="btn bg-[var(--color-surface)] border border-[var(--color-border)] px-8 py-4 flex items-center gap-3 hover:scale-105 transition-transform" title="Add to Calendar" aria-label="Add to Calendar">
+                <span class="text-xl">📅</span>
+                <span class="font-bold opacity-80">Add to Calendar</span>
             </button>
         </div>
     </div>

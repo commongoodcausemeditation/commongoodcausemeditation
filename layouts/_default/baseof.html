@@ -11,6 +11,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1999/xlink' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🕊️</text></svg>">
 
+    <!-- Lighthouse Optimized Typography Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <!-- Critical Resets -->
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,7 +55,7 @@
     {{ partial "timer-overlay.html" . }}
 
     <!-- Final Script Setup (Non-fingerprinted for better dev speed) -->
-    {{ range (slice "js/clocks.js" "js/theme-toggle.js" "js/antigravity.js" "js/mixer.js" "js/timer.js" "js/participation.js") }}
+    {{ range (slice "js/clocks.js" "js/theme-toggle.js" "js/antigravity.js" "js/mixer.js" "js/timer.js" "js/participation.js" "js/calendar.js") }}
     {{ with resources.Get . }}
         <script src="{{ .RelPermalink }}" defer></script>
     {{ end }}
